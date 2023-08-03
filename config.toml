@@ -61,12 +61,12 @@ items = [
 # Index page
 [extra.index]
 title = "Logan Roberts"
-image = "http://127.0.0.1:1111/img/headshot.jpg"
+image = "/img/headshot.jpg"
 image_alt = "An image of me"
 
 [extra.default_author]
 name = "Logan Roberts"
-avatar = "http://127.0.0.1:1111/img/headshot.jpg"
+avatar = "/img/headshot.jpg"
 avatar_alt = "An image of me"
 
 [extra.social]
