@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: lcroberts.dev/sitemap.xml

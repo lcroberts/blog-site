@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "http://lcroberts.dev"
+base_url = "lcroberts.dev"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -40,37 +40,41 @@ items = [
 items = [
     { lang = "en", links = [
         { url = "/", name = "Home" },
-        { url = "/categories", name = "Categories" },
-        { url = "/tags", name = "Tags" },
+        { url = "/aboutme", name = "About Me" },
+        { url = "/blog", name = "Blog" },
+        # { url = "/categories", name = "Categories" },
+        # { url = "/tags", name = "Tags" },
     ] },
 ]
-title = "title"
+title = "lcroberts"
 
 [extra.sidebar]
 items = [
     { lang = "en", links = [
-        { url = "/markdown", name = "Markdown" },
+        # { url = "/markdown", name = "Markdown" },
         { url = "/blog", name = "Blog" },
+        { url = "/categories", name = "Categories" },
+        { url = "/tags", name = "Tags" },
     ] },
 ]
 
 # Index page
 [extra.index]
-title = "Main title"
-image = "https://via.placeholder.com/200"
-image_alt = "Placeholder text describing the index's image."
+title = "Logan Roberts"
+image = "http://127.0.0.1:1111/img/headshot.jpg"
+image_alt = "An image of me"
 
 [extra.default_author]
-name = "John Doe"
-avatar = "https://via.placeholder.com/200"
-avatar_alt = "Placeholder text describing the default author's avatar."
+name = "Logan Roberts"
+avatar = "http://127.0.0.1:1111/img/headshot.jpg"
+avatar_alt = "An image of me"
 
 [extra.social]
-github = "https://github.com/johndoe"
-gitlab = "https://gitlab.com/johndoe"
-twitter = "https://twitter.com/johndoe"
-linkedin = "https://www.linkedin.com/in/john-doe-b1234567/"
-email = "john.doe@gmail.com"
+github = "https://github.com/lcroberts"
+# gitlab = "https://gitlab.com/johndoe"
+# twitter = "https://twitter.com/johndoe"
+linkedin = "https://www.linkedin.com/in/logan-roberts-075659266/"
+email = "LoganCRoberts@outlook.com"
 
 [extra.favicon]
 favicon = "/icons/favicon.ico"
