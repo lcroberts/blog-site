@@ -52,6 +52,8 @@ title = "lcroberts"
 items = [
     { lang = "en", links = [
         # { url = "/markdown", name = "Markdown" },
+        { url = "/", name = "Home" },
+        { url = "/aboutme", name = "About Me" },
         { url = "/blog", name = "Blog" },
         { url = "/categories", name = "Categories" },
         { url = "/tags", name = "Tags" },
