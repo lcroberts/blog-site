@@ -10,6 +10,11 @@ build_search_index = true
 # The site theme to use
 theme = "blow"
 
+taxonomies = [
+  {name = "tags", paginate_by = 5, feed = true},
+  {name = "categories", paginate_by = 5, feed = true},
+]
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
