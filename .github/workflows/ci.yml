@@ -9,7 +9,7 @@ jobs:
     environment: deploy
     steps:
       - name: Checkout the current branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@master
 
       - name: Initialize the ssh-agent
         uses: webfactory/ssh-agent@v0.4.1
@@ -20,7 +20,7 @@ jobs:
         run: sudo snap install zola --edge
 
       - name: Build the website
-        run: zola init && zola build
+        run: zola build
 
       - name: Scan the host key
         run: mkdir -p ~/.ssh/ && ssh-keyscan -H $DEPLOY_SERVER >> ~/.ssh/known_hosts
