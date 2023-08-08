@@ -23,13 +23,13 @@ jobs:
         run: zola build
 
       - name: Scan the host key
-        run: mkdir -p ~/.ssh/ && ssh-keyscan -H $DEPLOY_SERVER >> ~/.ssh/known_hosts
+        run: mkdir -p ~/.ssh/
         env:
           DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
 
       - name: Deploy the website
         run: >-
-          sudo rsync -avx --delete --exclude '.ssh' public/ $DEPLOY_USERNAME@$DEPLOY_SERVER:~/
+          ssh-keyscan -t ed25519 $DEPLOY_SERVER >> ~/.ssh/known_hosts && sudo rsync -avx --delete --exclude '.ssh' public/ $DEPLOY_USERNAME@$DEPLOY_SERVER:~/
         env:
           DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
           DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
