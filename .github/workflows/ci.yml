@@ -9,7 +9,7 @@ jobs:
     environment: deploy
     steps:
       - name: Checkout the current branch
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
 
       - name: Initialize the ssh-agent
         uses: webfactory/ssh-agent@v0.4.1
@@ -17,7 +17,7 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Install Zola
-        run: sudo snap install zola --edge && sudo snap install rsync
+        run: sudo snap install zola --edge
 
       - name: Build the website
         run: zola build
