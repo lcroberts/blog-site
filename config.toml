@@ -44,7 +44,7 @@ items = [
 [extra.navbar]
 items = [
     { lang = "en", links = [
-        { url = "/", name = "Home" },
+        # { url = "/", name = "Home" },
         { url = "/aboutme", name = "About Me" },
         { url = "/blog", name = "Blog" },
         # { url = "/categories", name = "Categories" },
