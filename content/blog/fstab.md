@@ -15,8 +15,9 @@ It contains 6 columns of information that can be divided with tabs or spaces.
 - Column 6: File System Check Order: The root file system should be set to ***1***, enter ***0*** for it not to be checked, enter ***2*** for all other file systems. Generally use ***0***.
 
 Steps for adding a device:
-1. Run ```sudo blkid``` to get UUID and filesystem
-2. Use ```sudo vi /etc/fstab``` and enter the new line for your device. (Use `sudo nano /etc/fstab` if you are not familiar with vi keybinds)
-3. Run ```sudo findmnt --verify``` to ensure your fstab entry is correct.
-4. Run ```sudo systemctl daemon-reload``` to update systemd.
-5. Run ```sudo mount -a``` to mount all newly added entries.
+1. Run ```lsblk``` to figure out the name assigned to the partition you want to mount
+2. Run ```sudo blkid``` to get UUID and filesystem
+3. Use ```sudo vi /etc/fstab``` and enter the new line for your device. (Use `sudo nano /etc/fstab` if you are not familiar with vi keybinds)
+4. Run ```sudo findmnt --verify``` to ensure your fstab entry is correct.
+5. Run ```sudo systemctl daemon-reload``` to update systemd.
+6. Run ```sudo mount -a``` to mount all newly added entries.
