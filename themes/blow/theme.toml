@@ -27,19 +27,19 @@ homepage = "https://tchartron.com"
 enable_search = true
 enable_sidebar = true
 enable_adsense = true
-enable_multilingue = true
+# enable_multilingue = true
 adsense_link = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=myclientid"
 
 [extra.lang]
 items = [
     { lang = "en", links = [
         { base_url = "/", name = "English" },
-        { base_url = "/fr", name = "French" }
+        # { base_url = "/fr", name = "French" }
     ] },
-    { lang = "fr", links = [
-        { base_url = "/", name = "Anglais" },
-        { base_url = "/fr", name = "Français" }
-    ] }
+    # { lang = "fr", links = [
+    #     { base_url = "/", name = "Anglais" },
+    #     { base_url = "/fr", name = "Français" }
+    # ] }
 ]
 
 [extra.navbar]
@@ -47,26 +47,28 @@ title = "title"
 items = [
     { lang = "en", links = [
         { url = "/", name = "Home" },
-        { url = "/categories", name = "Categories" },
-        { url = "/tags", name = "Tags" }
+        # { url = "/categories", name = "Categories" },
+        # { url = "/tags", name = "Tags" }
     ] },
-    { lang = "fr", links = [
-        { url = "/fr", name = "Accueil" },
-        { url = "/fr/categories", name = "Categories" },
-        { url = "/fr/tags", name = "Tags" }
-    ] }
+    # { lang = "fr", links = [
+    #     { url = "/fr", name = "Accueil" },
+    #     { url = "/fr/categories", name = "Categories" },
+    #     { url = "/fr/tags", name = "Tags" }
+    # ] }
 ]
 
 [extra.sidebar]
 items = [
     { lang = "en", links = [
-        { url = "/markdown", name = "Markdown" },
+        # { url = "/markdown", name = "Markdown" },
         { url = "/blog", name = "Blog" }
+        # { url = "/categories", name = "Categories" },
+        # { url = "/tags", name = "Tags" }
     ] },
-    { lang = "fr", links = [
-        { url = "/fr/markdown", name = "Markdown" },
-        { url = "/fr/blog", name = "Blog" }
-    ] }
+    # { lang = "fr", links = [
+    #     { url = "/fr/markdown", name = "Markdown" },
+    #     { url = "/fr/blog", name = "Blog" }
+    # ] }
 ]
 
 # Index page
@@ -82,11 +84,11 @@ avatar_alt = "Placeholder text describing the default author's avatar."
 
 [extra.social]
 github = "https://github.com/johndoe"
-gitlab = "https://gitlab.com/johndoe"
-twitter = "https://twitter.com/johndoe"
+# gitlab = "https://gitlab.com/johndoe"
+# twitter = "https://twitter.com/johndoe"
 linkedin = "https://www.linkedin.com/in/john-doe-b1234567/"
-stackoverflow = "https://stackoverflow.com/users/01234567/johndoe" 
-telegram = "https://t.me/johndoe"
+# stackoverflow = "https://stackoverflow.com/users/01234567/johndoe" 
+# telegram = "https://t.me/johndoe"
 email = "john.doe@gmail.com"
 
 
