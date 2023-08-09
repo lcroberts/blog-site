@@ -28,7 +28,7 @@ highlight_themes_css = [
 ]
 [extra]
 # Put all your custom variables here
-enable_search = true
+enable_search = false 
 enable_sidebar = true
 # enable_adsense = true
 # enable_multilingue = true
