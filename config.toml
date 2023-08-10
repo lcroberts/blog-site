@@ -29,7 +29,7 @@ highlight_themes_css = [
 [extra]
 # Put all your custom variables here
 enable_search = false 
-enable_sidebar = true
+enable_sidebar = false
 # enable_adsense = true
 # enable_multilingue = true
 # adsense_link = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=myclientid"
@@ -47,8 +47,8 @@ items = [
         { url = "/", name = "Home" },
         { url = "/aboutme", name = "About Me" },
         { url = "/blog", name = "Blog" },
-        # { url = "/categories", name = "Categories" },
-        # { url = "/tags", name = "Tags" },
+        { url = "/categories", name = "Categories" },
+        { url = "/tags", name = "Tags" },
     ] },
 ]
 title = "lcroberts"
@@ -57,11 +57,11 @@ title = "lcroberts"
 items = [
     { lang = "en", links = [
         # { url = "/markdown", name = "Markdown" },
-        { url = "/", name = "Home" },
+        # { url = "/", name = "Home" },
         # { url = "/aboutme", name = "About Me" },
         # { url = "/blog", name = "Blog" },
-        { url = "/categories", name = "Categories" },
-        { url = "/tags", name = "Tags" },
+        # { url = "/categories", name = "Categories" },
+        # { url = "/tags", name = "Tags" },
     ] },
 ]
 
