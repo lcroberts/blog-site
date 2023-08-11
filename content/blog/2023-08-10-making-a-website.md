@@ -13,7 +13,7 @@ While you can also forgo self-hosting and instead using something like GitHub Pa
 - [Making the Site](#making-the-site)
 - [Getting a Domain](#getting-a-domain)
 - [Setting up DNS](#setting-up-dns)
-- [Setting up a VPS and DNS](#setting-up-a-vps)
+- [Setting up the VPS](#setting-up-a-vps)
 
 <p><br /></p>
 
