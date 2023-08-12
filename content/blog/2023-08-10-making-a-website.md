@@ -122,7 +122,7 @@ Then enter the following text and insert your domain:
 ```bash
 #!/bin/bash
 
-sudo certbot --dns-linode -d your.domain --dns-linode-credentials ~/.secrets/linode.ini --installer nginx
+sudo certbot --nginx -d your.domain
 sudo certbot --dns-linode -d *.your.domain --dns-linode-credentials ~/.secrets/linode.ini --installer nginx
 ```
 Next we will install nginx, certbot, and the required plugins by running the following command:
