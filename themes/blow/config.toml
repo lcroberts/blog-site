@@ -160,9 +160,13 @@ taxonomies = [
 
 
 [extra.navbar]
+
 items = [
     { lang = "en", links = [
         { url = "/", name = "Home" },
+        { url = "/aboutme", name = "About Me" },
+        { url = "/Resume.pdf", name = "Resume" },
+        { url = "/blog", name = "Blog" },
         { url = "/categories", name = "Categories" },
         { url = "/tags", name = "Tags" },
     ] },
