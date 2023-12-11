@@ -28,7 +28,7 @@ highlight_themes_css = [
 ]
 [extra]
 # Put all your custom variables here
-enable_search = false 
+enable_search = false
 enable_sidebar = false
 # enable_adsense = true
 # enable_multilingue = true
@@ -46,6 +46,7 @@ items = [
     { lang = "en", links = [
         { url = "/", name = "Home" },
         { url = "/aboutme", name = "About Me" },
+        { url = "/Resume.pdf", name = "Resume" },
         { url = "/blog", name = "Blog" },
         { url = "/categories", name = "Categories" },
         { url = "/tags", name = "Tags" },
