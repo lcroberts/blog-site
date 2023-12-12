@@ -4,7 +4,8 @@ description = "About me section"
 date = "2023-08-03"
 template = "mdtext.html"
 +++
-***
+
+---
 
 My name is Logan Roberts. I am a computer science student at the University of North Carolina at Greensboro (UNCG). I have experience programming in java, python, c, and scripting in bash. As of July 19, 2023 I have the "AWS Certified Developer - Associate" certification.
 
@@ -18,8 +19,10 @@ Below is a list of useful CS courses I took at UNCG, with my grade in them and m
 
 Various data structures and algorithms classes: These include CSC 130, 230, 250, 350, and 330. I got an A in all of these classes and they provided the foundational knowledge I needed and basic coding practice to get more comfortable.
 
-Software Engineering (CSC 340): I got an A in this class. This class helped me to understand software development models and gain experience with collaborating with others through the semester-long project. It also gave me experience with HTML, basic CSS, and SpringBoot, as well as Spring Security for securing our webpage.
+Software Engineering (CSC 340): I got an A in this class. This class helped me to understand software development models and gain experience with collaborating with others through the semester-long project. It also gave me experience with HTML, basic CSS, and Spring Boot, as well as Spring Security for securing our webpage.
 
-System Programming (CSC 362): I got an A in this class. It gave me experience with C programming and helped to cover some of the gaps in my OS concept knowledge that I did not learn from my tinkering with linux. It also covered some programming concepts I had not learned in other classes. These included, multi-threading, processes, and basic networking.
+System Programming (CSC 362): I got an A in this class. It gave me experience with C programming and helped to cover some of the gaps in my OS concept knowledge that I did not learn from my tinkering with linux. It also covered some programming concepts I had not learned in other classes. These included, multi-threading, processes, and basic networking and security considerations.
 
 Data Science (CSC 405): I got an A in this class. This class helped me improve my python skills and learn how to leverage various python libraries for data manipulation and visualization.
+
+
