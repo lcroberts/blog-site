@@ -6,7 +6,7 @@ categories=["opinion"]
 tags=["coding","opinion","text editing"]
 +++
 
-I'll start this off by saying that this is a blog post written out of frustration and anger. Anytime I have to watch classmates and instructors who edit code at a snails pace, a little bit of me dies. I'm not talking situations where they are going slow because they are thinking as they type. I am talking about when someone knows exactly what they are putting down, but they are bottlenecked by the speed at which code is coming from their hands. I am of the opinion that your brain should be your bottleneck, not your hands.
+This is a post written out of frustration more than anything else. At my college I've watched a fair amount of people code and often they go way slower than I think they should be able to. It's generally not that they don't know what they are trying to do, most people have at least a general idea of what they want to do, it just takes them a while to turn that idea into runnable code. I've seen this pattern with both instructors and students and it frustrates me. I strongly believe that your brain should be your bottleneck while coding, not your hands.
 
 # Keep Your Brain As Your Bottleneck
 
