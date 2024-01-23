@@ -1,5 +1,5 @@
 +++
-title = "How to Edit Code Fast (The Advantages of a PDE)"
+title = "How to Edit Code Fast"
 date = "2024-01-12"
 [taxonomies]
 categories=["opinion"]
@@ -17,3 +17,7 @@ This is a post written out of frustration more than anything else. At my college
 # Use Keybindings
 
 # There's (Almost) Always A Better Way To Do Things
+
+## Sometimes There's An Initial Slowdown
+
+## Learn From Other Developers
