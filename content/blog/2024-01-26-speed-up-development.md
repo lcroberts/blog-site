@@ -1,12 +1,16 @@
 +++
 title = "Speeding Up Your Software Development Workflow"
-date = "2024-01-12"
+date = "2024-01-26"
 [taxonomies]
 categories=["opinion"]
 tags=["coding","opinion","text editing"]
 +++
 
+Note: This is the written version of a presentation I am giving to the UNCG competitive programming club 01-29-2024
+
 This is a post written out of frustration more than anything else. At my college I've watched a fair amount of people code and often they go way slower than I think they should be able to. It's generally not that they don't know what they are trying to do, most people have at least a general idea of what they want to do, it just takes them a while to turn that idea into runnable code. I've seen this pattern with both instructors and students and it frustrates me. I strongly believe that your brain should be your bottleneck while coding, not your hands.
+
+It is also important to note that sometimes you'll slow down when making a change to your workflow. Often times this is temporary and you'll end up faster once you adjust to it. However, not every change is good and sometimes something you think will help only ends up slowing you down. While this warning doesn't apply to everything in this blog post, it's still something good to keep in mind.
 
 # Keep Your Brain As Your Bottleneck
 
@@ -30,10 +34,20 @@ I use neovim for most of my programming. I like it because of several reasons. T
 
 While I've spent a lot of time talking about editors in this section so far, that is not the only focus. CLI and GUI apps/tools of all kinds are included in this section. Even editor plugins can be included. A tool is anything that makes your life easier, and finding the right one is important. Another great example of tools is the entire class of tools that hook into git. Whether it be a full graphical frontend for git like github desktop, or editor integrations such as those found in VSCode or Jetbrains IDEs they can make your life easier. A git tool I use extensively is [gitsigns](https://github.com/lewis6991/gitsigns.nvim) for neovim. It allows you to stage or reset hunks so you can perform git operations on portions of files. While you could do that from the git CLI, tools to make this easier exist, so why shouldn't you use them?
 
-# Use Keybindings
+# Use (And Customize) Keybindings
+
+Another seemingly obvious way to speed yourself up is to use keybindings. It seems obvious, but a shocking number of people I've watched program don't use them where they probably should be. Keybindings exist to speed up repetitive tasks such as commenting code or allow for convenient access to functionality that is incredibly useful such as variable renaming or searching for a word. Designers of IDEs and text editors make these because they think that they functions users should have quick access to. So at the very least we might as well make these developers work worth it and use them.
+
+The less obvious part of this is keybind customization. Editor designers aren't omniscient, so they don't know what keybinds you will end up using the most, or never use. Also, the keybinding you may find useful may be completely useless to someone else who uses their editor a little bit differently. This is why you should customize your keybinds. Ones you use often should be easy to input and you probably don't need to keep ones that you'll never use.
+
+Another advantage of setting bindings yourself is increased familiarity with them. You are much more likely to remember and use bindings you make. Not only is that keybind important enough to where you think you need to set it to something, you will also have a reason as to why you set the binding to the keys you do.
+
+Personally, in [my neovim config](https://github.com/lcroberts/nvim-config) I have set many of my keybindings manually and made new ones for actions I wanted. While I kept many of the universally accepted ones, the keybinds I commonly use are different than everyone else, and that is reflected in the config. The advantage of the way neovim handles binding is that you can assign a binding that does any sequence of keypresses or even lua code. This means I even have some keybinds that move my cursor to the end of a line and input a semicolon. Someone else may use primarily whitespace based languages and never use that, but for me it's incredibly useful and a small but frequent time saver.
 
 # There's (Almost) Always A Better Way To Do Things
 
-## Sometimes There's An Initial Slowdown
+This last section is less concrete advice and more of a mindset you should get into. If you are ever doing something and it feels slow, there is probably a better way to do it. I run into this all the time. I find myself doing a repetitive task and I think to myself "There has to be a better way to do this" and so far I've been right almost every time. This thought has lead me to learn about vim macros, as well as the \<C-a> shortcut while in visual mode (Sets incrementing values). It's these small things I pick up every time that compound with each new addition and continually speed me up. Any time you have the thought that there is a better way to do something, try to find the better way. Sometimes it won't be obvious but often taking the time to find it can be worth it.
 
 ## Learn From Other Developers
+
+A great way to find new ways to do things is to watch other developers and see if they are doing anything that you didn't know about. I've picked up several new trick that I figured out after watching a youtuber called [ThePrimeagen](https://www.youtube.com/c/theprimeagen). Other developers (particularly those with more experience than you) probably know a few tricks you don't know and if they seem like something you'd like to know how to do, take the time to learn how they did it. Don't just think "Hey that was neat, I wonder how they did that." Instead, ask them how they did it or try to figure it out yourself. Often times people are willing to share things if you ask nice enough. They are especially willing to share if it's something they figured out themselves and they think it's clever.
