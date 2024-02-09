@@ -25,4 +25,10 @@ System Programming (CSC 362): I got an A in this class. It gave me experience wi
 
 Data Science (CSC 405): I got an A in this class. This class helped me improve my python skills and learn how to leverage various python libraries for data manipulation and visualization.
 
+Courses I am Currently Taking:
 
+Concepts of Programming Languages (CSC 339)
+
+Principles of Computer Security (CSC 481)
+
+Principles of Operating Systems (CSC 462)
