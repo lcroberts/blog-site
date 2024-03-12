@@ -1,6 +1,6 @@
 +++
 title = "Why I Switched To Home Row Modifier Keys"
-date = "2024-03-13"
+date = "2024-03-12"
 [taxonomies]
 categories=["opinion","workflow"]
 tags=["coding","opinion","text editing","workflow improvements"]
