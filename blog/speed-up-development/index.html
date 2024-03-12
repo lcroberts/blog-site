@@ -1,0 +1,446 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!-- FAVICON -->
+      
+      
+      <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+      
+      
+      <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+      
+      
+      <link href='&#x2F;icons&#x2F;android-chrome-512x512.png' rel="android-chrome" sizes="512x512" />
+      
+      
+      <link href='&#x2F;icons&#x2F;android-chrome-192x192.png' rel="android-chrome" sizes="192x192" />
+      
+      
+      <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+      
+      
+      <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+      
+
+      <link href="/css/main.css" rel="stylesheet">
+      <link id="syntax_highlight" href="#" rel="stylesheet">
+
+      <title>
+        
+        
+        
+      </title>
+  </head>
+  <body class="dark:bg-gray-700 flex flex-col h-screen justify-between">
+  <!---------------------------------------------------------->
+  <!------------------------- NAVBAR ------------------------->
+  <!---------------------------------------------------------->
+  <nav id="navbar" class="bg-gray-200 dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <div class="flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button id="toggle-mobile-menu" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+              Heroicon name: outline/menu
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!--
+              Icon when menu is open.
+              Heroicon name: outline/x
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 flex items-center">
+          <div class="flex-shrink-0 flex items-center ml-2">
+            <a href="/" class="text-xl text-gray-800 dark:text-white">lcroberts</a>
+            <!-- <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
+            <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow"> -->
+          </div>
+          <div class="hidden sm:block sm:ml-6">
+            <div class="nav-links flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              
+                
+                  
+                    <a href="&#x2F;" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                  
+                    <a href="&#x2F;aboutme" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Me</a>
+                  
+                    <a href="&#x2F;Resume.pdf" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Resume</a>
+                  
+                    <a href="&#x2F;blog" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                  
+                    <a href="&#x2F;categories" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Categories</a>
+                  
+                    <a href="&#x2F;tags" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Tags</a>
+                  
+                
+              
+
+              
+            </div>
+          </div>
+
+          
+
+        <!---------------------------- Sidebar Menu ---------------------------->
+        
+
+        
+        <!-- Theme switch button -->
+        <div class="flex p-2">
+          <button id="switch-theme" type="button" class="bg-gray-200 text-gray-800 hover:text-gray-900 dark:bg-gray-800 dark:text-gray-400 dark:hover:text-white p-1 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+            <span class="sr-only">Switch Theme</span>
+            <!-- Heroicon name: outline/light -->
+            <svg id="light" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+            <!-- Heroicon name: outline/dark -->
+            <svg id="dark" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!----------------------------- Mobile menu ----------------------------->
+    <div id="mobile-menu" class="sm:hidden fixed z-10 overflow-hidden">
+      <div class="nav-links flex flex-col space-y-4 items-center w-screen dark:bg-gray-800 transition-all ease-out duration-500 h-0">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        
+          
+            
+              <a href="&#x2F;" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            
+              <a href="&#x2F;aboutme" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Me</a>
+            
+              <a href="&#x2F;Resume.pdf" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Resume</a>
+            
+              <a href="&#x2F;blog" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+            
+              <a href="&#x2F;categories" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Categories</a>
+            
+              <a href="&#x2F;tags" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Tags</a>
+            
+          
+        
+
+        
+      </div>
+    </div>
+  </nav>
+  <!----------------------------------------------------------->
+  <!------------------------- CONTENT ------------------------->
+  <!----------------------------------------------------------->
+  <main class="max-w-7xl mx-auto text-black dark:text-gray-200 w-full mb-auto">
+    
+<div class="flex">
+   <h1 class="text-2xl text-bold my-6 mx-auto">
+      Speeding Up Your Software Development Workflow
+    </h1>
+</div>
+<div class="flex gap-x-8">
+  <div class="flex flex-col sm:w-3/4 w-full border border-2 border-gray-200 dark:border-black rounded-xl p-5 shadow-2xl bg-gray-200 dark:bg-gray-800">
+
+    <div class="flex flex-col py-2 justify-center">
+     <!-- <h2 class="text-2xl text-bold"><a href='&#x2F;blog&#x2F;speed-up-development&#x2F;'>Speeding Up Your Software Development Workflow</a></h2> -->
+      <p class="text-bold"></p>
+    </div>
+
+    <!-- Read time and word count -->
+    <div class="flex flex-wrap py-2">
+      <div class="flex items-center w-1/3">
+        <div class="flex flex-col sm:flex-row sm:space-x-3 text-gray-900 dark:text-gray-400">
+          <span class="flex">
+            <!-- Icon clock -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="ml-1">10 min</span>
+          </span>
+          <span class="flex">
+            <!-- Icon pencil -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+            </svg>
+            <span class="ml-1">1866 words</span>
+          </span>
+        </div>
+      </div>
+      <!-- Author and publish date -->
+      <div class="flex w-2/3 sm:space-x-3 text-gray-900 dark:text-gray-400 justify-end">
+         <span class="flex items-center">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          <span class="ml-1"><time datetime="2024-01-26">Published on January 26, 2024</time></span>
+        </span>
+        <span class="flex items-center">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+          
+            <span class="ml-1">Logan Roberts</span>
+            <img class="rounded-full h-9 w-9 ml-1" src="&#x2F;img&#x2F;headshot.jpg" alt="An image of me">
+          
+        </span>
+      </div>
+    </div>
+
+    <!-- Categories and Tags -->
+    <div class="flex flex-wrap py-2">
+      <div class="w-2/3">
+        
+          <p>
+            Categories:
+            
+            <a class="text-gray-900 dark:text-gray-400 flex py-1 items-center" href="/categories/opinion/">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              </svg>
+              <span class="pl-1">opinion</span>
+            </a>
+            
+          </p>
+        
+      </div>
+      <div class="w-1/3">
+        
+        <p>
+          Tags:
+          
+          <a class="text-gray-900 dark:text-gray-400 flex py-1 items-center" href="/tags/coding/">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+            </svg>
+            <span class="pl-1">coding</span>
+          </a>
+          
+          <a class="text-gray-900 dark:text-gray-400 flex py-1 items-center" href="/tags/opinion/">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+            </svg>
+            <span class="pl-1">opinion</span>
+          </a>
+          
+          <a class="text-gray-900 dark:text-gray-400 flex py-1 items-center" href="/tags/text-editing/">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+            </svg>
+            <span class="pl-1">text editing</span>
+          </a>
+          
+        </p>
+        
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div id="page-content" class="text-bold mt-2">
+      <p>Note: This is the written version of a presentation I am giving to the UNCG competitive programming club 01-29-2024</p>
+<p>This is a post written out of frustration more than anything else. At my
+college I've watched a fair amount of people code and often they go way slower
+than I think they should be able to. It's generally not that they don't know
+what they are trying to do, most people have at least a general idea of what
+they want to do, it just takes them a while to turn that idea into runnable
+code. I've seen this pattern with both instructors and students and it
+frustrates me. I strongly believe that your brain should be your bottleneck
+while coding, not your hands.</p>
+<p>It is also important to note that sometimes you'll slow down when making a
+change to your workflow. Often times this is temporary and you'll end up faster
+once you adjust to it. However, not every change is good and sometimes
+something you think will help only ends up slowing you down. While this warning
+doesn't apply to everything in this blog post, it's still something good to
+keep in mind.</p>
+<h1 id="keep-your-brain-as-your-bottleneck">Keep Your Brain As Your Bottleneck</h1>
+<p>Software development is problem solving, and our most useful tool in problem
+solving is our brain. When working on a problem we don't want our brain to be
+ahead of what we are able to put down into code. This can lead to what I'll
+call &quot;lost thoughts.&quot; Lost thoughts are thoughts that you don't have time to do
+anything with before they leave your mind. We've all had them before. It's that
+feeling when you get up and walk into another room only to forget what you went
+there to do. To minimize the number of our thoughts that become lost thoughts
+in software development we want to speed up the rate at which we can write
+code. If you can get quick enough the bottleneck of code away from your hands
+and into your brain. This lets us get more use out of our most valuable tool,
+our brain.</p>
+<h1 id="learn-to-type-fast">Learn To Type Fast</h1>
+<p>The most obvious way to get faster at writing code is to type faster. This even
+seems like one of those things that shouldn't even need to be said. However,
+based on my experience watching other student code, it should be said. Many
+people I've met seem to not think about how fast they're typing. As software
+developers it is something we should think about. Faster typing leads to more
+code we can write in the same amount of time. It's not even very difficult to
+increase typing speed, though it may take some time. All you have to do is
+actively practice. A little bit every day helps a lot.</p>
+<p>There are two main ways I personally practice typing. The first and most
+readily available way is <a href="https://monkeytype.com/">monkeytype</a>. It is open
+source and the github repo can be found
+<a href="https://github.com/Instagram/MonkeyType">here.</a> It's a great way to practice
+typing plain English words. There are a few tips I have to get the most of it.
+Actively push your typing speed, don't just passively type. Without pushing
+yourself you won't notice any speedups. Also, try to type words instead of
+letters. By this I mean try to get to the point where you don't think about the
+letters you are typing and instead are just focusing on the words.</p>
+<p>Another good way to practice typing speed is by writing notes. While in class I
+tend to take notes as both a way to stay focused and to practice typing. The
+fact that I can search through them later is always a nice bonus as well. Using
+this method I try to type out as much as possible, but it can't be at the
+detriment of listening to the instructor or understanding what is going on. In
+this way it's much more similar to what you do when you write code that using
+monkeytype. Your brain needs to primarily be focused elsewhere and typing
+should be almost on autopilot. This much more closely mimics how we should be
+doing things</p>
+<h1 id="tools-make-your-job-easier-and-faster">Tools Make Your Job Easier (and Faster)</h1>
+<p>Another obvious way to speed up your software development workflow is to use
+tools made for the jobs you're trying to do. The &quot;best&quot; tool is often up to
+personal preference, but trying several tools can help you find what you like
+or dislike and you may find a whole new way of doing things that works better
+for you.</p>
+<p>The most obvious tool we use during development is our IDE or text editor.
+Different editors do certain things better or worse, but some are obviously
+poor choices. For example you shouldn't be using Intellij to program C. If you
+want to use a Jetbrains IDE for C, use CLion. However, for Java Intellij is a
+fantastic choice and what I use. It is still important to try different
+editors. If you cannot explain why you like the editor you use compared to
+other editors then you probably have not tried enough. Here's an example of how
+you should be able to explain your editor choice:</p>
+<p>I use neovim for most of my programming. I like it because of several reasons.
+The vim style keybindings are great once you get to know them well. While other
+editors have vim keybinding plugins and <a href="https://github.com/vscode-neovim/vscode-neovim">VSCode even supports using fully
+embedded neovim instance</a>,
+there are other reasons I prefer neovim. It's extremely lightweight and feels
+snappy. It doesn't rely on a GUI and as a result you can use neovim or vim
+(which is available by default on many linux distros) when you SSH into a
+server. Finally, I like how extensible it is and how vibrant the community is.
+It supports LSP and as a result you can use neovim to program any language with
+a language server. You have access to many APIs that let you hook into existing
+functionality, and the use of lua as the configuration/scripting language makes
+configuring neovim feel easier than VSCode and more fun.</p>
+<p>While I've spent a lot of time talking about editors in this section so far,
+that is not the only focus. CLI and GUI apps/tools of all kinds are included in
+this section. Even editor plugins can be included. A tool is anything that
+makes your life easier, and finding the right one is important. Another great
+example of tools is the entire class of tools that hook into git. Whether it be
+a full graphical frontend for git like github desktop, or editor integrations
+such as those found in VSCode or Jetbrains IDEs they can make your life easier.
+A git tool I use extensively is
+<a href="https://github.com/lewis6991/gitsigns.nvim">gitsigns</a> for neovim. It allows
+you to stage or reset hunks so you can perform git operations on portions of
+files. While you could do that from the git CLI, tools to make this easier
+exist, so why shouldn't you use them?</p>
+<h1 id="use-and-customize-keybindings">Use (And Customize) Keybindings</h1>
+<p>Another seemingly obvious way to speed yourself up is to use keybindings. It
+seems obvious, but a shocking number of people I've watched program don't use
+them where they probably should be. Keybindings exist to speed up repetitive
+tasks such as commenting code or allow for convenient access to functionality
+that is incredibly useful such as variable renaming or searching for a word.
+Designers of IDEs and text editors make these because they think that they
+functions users should have quick access to. So at the very least we might as
+well make these developers work worth it and use them.</p>
+<p>The less obvious part of this is keybind customization. Editor designers aren't
+omniscient, so they don't know what keybinds you will end up using the most, or
+never use. Also, the keybinding you may find useful may be completely useless
+to someone else who uses their editor a little bit differently. This is why you
+should customize your keybinds. Ones you use often should be easy to input and
+you probably don't need to keep ones that you'll never use.</p>
+<p>Another advantage of setting bindings yourself is increased familiarity with
+them. You are much more likely to remember and use bindings you make. Not only
+is that keybind important enough to where you think you need to set it to
+something, you will also have a reason as to why you set the binding to the
+keys you do.</p>
+<p>Personally, in <a href="https://github.com/lcroberts/nvim-config">my neovim config</a> I
+have set many of my keybindings manually and made new ones for actions I
+wanted. While I kept many of the universally accepted ones, the keybinds I
+commonly use are different than everyone else, and that is reflected in the
+config. The advantage of the way neovim handles binding is that you can assign
+a binding that does any sequence of keypresses or even lua code. This means I
+even have some keybinds that move my cursor to the end of a line and input a
+semicolon. Someone else may use primarily whitespace based languages and never
+use that, but for me it's incredibly useful and a small but frequent time
+saver.</p>
+<h1 id="there-s-almost-always-a-better-way-to-do-things">There's (Almost) Always A Better Way To Do Things</h1>
+<p>This last section is less concrete advice and more of a mindset you should get
+into. If you are ever doing something and it feels slow, there is probably a
+better way to do it. I run into this all the time. I find myself doing a
+repetitive task and I think to myself &quot;There has to be a better way to do this&quot;
+and so far I've been right almost every time. This thought has lead me to learn
+about vim macros, as well as the &lt;C-a&gt; shortcut while in visual mode (Sets
+incrementing values). It's these small things I pick up every time that
+compound with each new addition and continually speed me up. Any time you have
+the thought that there is a better way to do something, try to find the better
+way. Sometimes it won't be obvious but often taking the time to find it can be
+worth it.</p>
+<h2 id="learn-from-other-developers">Learn From Other Developers</h2>
+<p>A great way to find new ways to do things is to watch other developers and see
+if they are doing anything that you didn't know about. I've picked up several
+new trick that I figured out after watching a youtuber called
+<a href="https://www.youtube.com/c/theprimeagen">ThePrimeagen</a>. Other developers
+(particularly those with more experience than you) probably know a few tricks
+you don't know and if they seem like something you'd like to know how to do,
+take the time to learn how they did it. Don't just think &quot;Hey that was neat, I
+wonder how they did that.&quot; Instead, ask them how they did it or try to figure
+it out yourself. Often times people are willing to share things if you ask nice
+enough. They are especially willing to share if it's something they figured out
+themselves and they think it's clever.</p>
+
+    </div>
+
+
+
+  </div>
+
+
+    <!-- Table of content -->
+    
+
+
+</div>
+
+  </main>
+
+  <!----------------------------------------------------------->
+  <!------------------------- PAGINATION ---------------------->
+  <!----------------------------------------------------------->
+  
+
+
+
+  <!---------------------------------------------------------->
+  <!------------------------- FOOTER ------------------------->
+  <!---------------------------------------------------------->
+  <footer class="max-w-7xl mx-auto relative pt-1 px-2 border-b-2 border-gray-300 dark:border-gray-200 w-full">
+    <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
+      <div class="sm:w-2/3 text-center py-6">
+        <p class="text-sm text-black dark:text-white font-bold mb-2">
+          Made using a modified version of the <a href="https://www.getzola.org/themes/blow/">blow</a> theme for <a href="https://www.getzola.org/" target="_blank">Zola</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!------------------------- SCRIPTS ------------------------->
+  <script defer src="/js/main.js"></script>
+  
+  <!--  -->
+  
+  <script defer src="/js/page.js"></script>
+
+  </body>
+</html>

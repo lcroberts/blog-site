@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - linux</title>
+    <link href="/categories/linux/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-08-07T00:00:00+00:00</updated>
+    <id>/categories/linux/atom.xml</id>
+    <entry xml:lang="en">
+        <title>An (Actually) Easy Guide to Editing the Fstab file</title>
+        <published>2023-08-07T00:00:00+00:00</published>
+        <updated>2023-08-07T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="/blog/fstab/" type="text/html"/>
+        <id>/blog/fstab/</id>
+        
+        <content type="html">&lt;p&gt;The fstab file contains the drives that will be mounted at boot time.
+It contains 6 columns of information that can be divided with tabs or spaces.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Column 1: Device: You can use the UUID (Reccomended) or device path (UUID=&lt;em&gt;UUID&lt;&#x2F;em&gt; or &lt;code&gt;&#x2F;dev&#x2F;*device name*&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;Column 2: Mount Point: Directory you want the drive to be mounted in. This can be a path to anywhere on the system.&lt;&#x2F;li&gt;
+&lt;li&gt;Column 3: File System: Put the partitions file system, &lt;em&gt;&lt;strong&gt;auto&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; is valid if unknown&lt;&#x2F;li&gt;
+&lt;li&gt;Column 4: Options: Allows to change the behavior of the mounted drive. &lt;em&gt;&lt;strong&gt;defaults&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; is a valid option&lt;&#x2F;li&gt;
+&lt;li&gt;Column 5: Backup Operation (Dump): An outdated backup mechanism and should not be used. Use &lt;em&gt;&lt;strong&gt;0&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; in this column.&lt;&#x2F;li&gt;
+&lt;li&gt;Column 6: File System Check Order: The root file system should be set to &lt;em&gt;&lt;strong&gt;1&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;, enter &lt;em&gt;&lt;strong&gt;0&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; for it not to be checked, enter &lt;em&gt;&lt;strong&gt;2&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; for all other file systems. Generally use &lt;em&gt;&lt;strong&gt;0&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Steps for adding a device:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Run &lt;code&gt;lsblk&lt;&#x2F;code&gt; to figure out the name assigned to the partition you want to mount&lt;&#x2F;li&gt;
+&lt;li&gt;Run &lt;code&gt;sudo blkid&lt;&#x2F;code&gt; to get UUID and filesystem&lt;&#x2F;li&gt;
+&lt;li&gt;Use &lt;code&gt;sudo vi &#x2F;etc&#x2F;fstab&lt;&#x2F;code&gt; and enter the new line for your device. (Use &lt;code&gt;sudo nano &#x2F;etc&#x2F;fstab&lt;&#x2F;code&gt; if you are not familiar with vi keybinds)&lt;&#x2F;li&gt;
+&lt;li&gt;Run &lt;code&gt;sudo findmnt --verify&lt;&#x2F;code&gt; to ensure your fstab entry is correct.&lt;&#x2F;li&gt;
+&lt;li&gt;Run &lt;code&gt;sudo systemctl daemon-reload&lt;&#x2F;code&gt; to update systemd.&lt;&#x2F;li&gt;
+&lt;li&gt;Run &lt;code&gt;sudo mount -a&lt;&#x2F;code&gt; to mount all newly added entries.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+</feed>

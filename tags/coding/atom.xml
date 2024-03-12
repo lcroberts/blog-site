@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - coding</title>
+    <link href="/tags/coding/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-03-12T00:00:00+00:00</updated>
+    <id>/tags/coding/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Why I Switched To Home Row Modifier Keys</title>
+        <published>2024-03-12T00:00:00+00:00</published>
+        <updated>2024-03-12T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="/blog/home-row-mods/" type="text/html"/>
+        <id>/blog/home-row-mods/</id>
+        
+        <content type="html">&lt;p&gt;The day has come where I have to pay attention to my keyboard ergonomics. This
+realization came to me as I was finishing going through the book &amp;quot;Writing An
+Interpreter In Go&amp;quot; and I began having some pain in my hands. This was my first
+time writing multiple thousands of lines of code in one project and I would go
+through the book in large chunks at the time. Combine that with extensive use
+of hotkeys and I found myself frequently putting my hands in weird unnatural
+positions, which is what I believe led to the discomfort in my hands.&lt;&#x2F;p&gt;
+&lt;p&gt;I loosely knew about the idea of ergonomic split keyboards which eventually
+brought me to &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=pK41Mr4Kdd0&quot;&gt;this&lt;&#x2F;a&gt; video by Code
+to the Moon. In it they talk about their own keyboard rabbit hole and some of
+the things they learned along the way. The thing that immediately grabbed my
+attention when I heard about it was the idea of home row modifier keys. This
+means that if you hold down one of the keys in the home row of your keyboard
+then it will act as a modifier but if you tap it, then it will input the key as
+usual. As I have a Keychron Q5 Pro that has QMK I have access to all the
+keyboard customization that QMK has to offer and I began to wonder if I could
+set it up on my keyboard.&lt;&#x2F;p&gt;
+&lt;p&gt;After a little big of looking around I found a wonderful guide on how to set up
+home row mods in QMK. If you are interested you can find it
+&lt;a href=&quot;https:&#x2F;&#x2F;precondition.github.io&#x2F;home-row-mods&quot;&gt;here&lt;&#x2F;a&gt;. It goes through all the
+settings and common ways people set it up. One thing gave me an issue, that
+being the setting HOLD_ON_OTHER_KEY_PRESS. It makes it so that if another key
+is pressed down before one of your modifier keys is fully released, then the
+one key will act as a modifier before the configured activation time for the
+mod key. While this is disabled by default, there was some setting in my QMK
+workspace that was enabling it. This ruins the experience of using home row
+mods if you are somewhat fast at typing. It wasn&#x27;t until I figured this out and
+disabled it that I really began to see the value of home row mods. While they
+add a small amount of latency for some key presses being entered the order is
+unaffected and I&#x27;ve found it hasn&#x27;t really affected my typing speed at all. It
+has however increased the ease at which I am able to use shortcuts and even
+just type due to shift being include in the list of modifiers I added. While it
+does take a little bit to get used to so far I am enjoying them and I can see
+more key map customizations in my future.&lt;&#x2F;p&gt;
+&lt;p&gt;It took a good bit of tinkering to land on my configuration which can be seen
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lcroberts&#x2F;dotfiles&#x2F;tree&#x2F;main&#x2F;keyboards&#x2F;keychron_q5_pro&quot;&gt;here&lt;&#x2F;a&gt;.
+The left hand home rows are in the following order (right to left): GUI
+(Meta&#x2F;Windows key), Control, Shift, Alt. I also added a toggle to take me to a
+layer where the home row modifiers are disabled so that I can still play games
+without issue. If you have a keyboard where it is possible to set up home row
+mods I would encourage you to try them out. It is a very different way to use
+keybindings and might help reduce the risk of RSI as well.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Speeding Up Your Software Development Workflow</title>
+        <published>2024-01-26T00:00:00+00:00</published>
+        <updated>2024-01-26T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="/blog/speed-up-development/" type="text/html"/>
+        <id>/blog/speed-up-development/</id>
+        
+        <content type="html">&lt;p&gt;Note: This is the written version of a presentation I am giving to the UNCG competitive programming club 01-29-2024&lt;&#x2F;p&gt;
+&lt;p&gt;This is a post written out of frustration more than anything else. At my
+college I&#x27;ve watched a fair amount of people code and often they go way slower
+than I think they should be able to. It&#x27;s generally not that they don&#x27;t know
+what they are trying to do, most people have at least a general idea of what
+they want to do, it just takes them a while to turn that idea into runnable
+code. I&#x27;ve seen this pattern with both instructors and students and it
+frustrates me. I strongly believe that your brain should be your bottleneck
+while coding, not your hands.&lt;&#x2F;p&gt;
+&lt;p&gt;It is also important to note that sometimes you&#x27;ll slow down when making a
+change to your workflow. Often times this is temporary and you&#x27;ll end up faster
+once you adjust to it. However, not every change is good and sometimes
+something you think will help only ends up slowing you down. While this warning
+doesn&#x27;t apply to everything in this blog post, it&#x27;s still something good to
+keep in mind.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;keep-your-brain-as-your-bottleneck&quot;&gt;Keep Your Brain As Your Bottleneck&lt;&#x2F;h1&gt;
+&lt;p&gt;Software development is problem solving, and our most useful tool in problem
+solving is our brain. When working on a problem we don&#x27;t want our brain to be
+ahead of what we are able to put down into code. This can lead to what I&#x27;ll
+call &amp;quot;lost thoughts.&amp;quot; Lost thoughts are thoughts that you don&#x27;t have time to do
+anything with before they leave your mind. We&#x27;ve all had them before. It&#x27;s that
+feeling when you get up and walk into another room only to forget what you went
+there to do. To minimize the number of our thoughts that become lost thoughts
+in software development we want to speed up the rate at which we can write
+code. If you can get quick enough the bottleneck of code away from your hands
+and into your brain. This lets us get more use out of our most valuable tool,
+our brain.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;learn-to-type-fast&quot;&gt;Learn To Type Fast&lt;&#x2F;h1&gt;
+&lt;p&gt;The most obvious way to get faster at writing code is to type faster. This even
+seems like one of those things that shouldn&#x27;t even need to be said. However,
+based on my experience watching other student code, it should be said. Many
+people I&#x27;ve met seem to not think about how fast they&#x27;re typing. As software
+developers it is something we should think about. Faster typing leads to more
+code we can write in the same amount of time. It&#x27;s not even very difficult to
+increase typing speed, though it may take some time. All you have to do is
+actively practice. A little bit every day helps a lot.&lt;&#x2F;p&gt;
+&lt;p&gt;There are two main ways I personally practice typing. The first and most
+readily available way is &lt;a href=&quot;https:&#x2F;&#x2F;monkeytype.com&#x2F;&quot;&gt;monkeytype&lt;&#x2F;a&gt;. It is open
+source and the github repo can be found
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Instagram&#x2F;MonkeyType&quot;&gt;here.&lt;&#x2F;a&gt; It&#x27;s a great way to practice
+typing plain English words. There are a few tips I have to get the most of it.
+Actively push your typing speed, don&#x27;t just passively type. Without pushing
+yourself you won&#x27;t notice any speedups. Also, try to type words instead of
+letters. By this I mean try to get to the point where you don&#x27;t think about the
+letters you are typing and instead are just focusing on the words.&lt;&#x2F;p&gt;
+&lt;p&gt;Another good way to practice typing speed is by writing notes. While in class I
+tend to take notes as both a way to stay focused and to practice typing. The
+fact that I can search through them later is always a nice bonus as well. Using
+this method I try to type out as much as possible, but it can&#x27;t be at the
+detriment of listening to the instructor or understanding what is going on. In
+this way it&#x27;s much more similar to what you do when you write code that using
+monkeytype. Your brain needs to primarily be focused elsewhere and typing
+should be almost on autopilot. This much more closely mimics how we should be
+doing things&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;tools-make-your-job-easier-and-faster&quot;&gt;Tools Make Your Job Easier (and Faster)&lt;&#x2F;h1&gt;
+&lt;p&gt;Another obvious way to speed up your software development workflow is to use
+tools made for the jobs you&#x27;re trying to do. The &amp;quot;best&amp;quot; tool is often up to
+personal preference, but trying several tools can help you find what you like
+or dislike and you may find a whole new way of doing things that works better
+for you.&lt;&#x2F;p&gt;
+&lt;p&gt;The most obvious tool we use during development is our IDE or text editor.
+Different editors do certain things better or worse, but some are obviously
+poor choices. For example you shouldn&#x27;t be using Intellij to program C. If you
+want to use a Jetbrains IDE for C, use CLion. However, for Java Intellij is a
+fantastic choice and what I use. It is still important to try different
+editors. If you cannot explain why you like the editor you use compared to
+other editors then you probably have not tried enough. Here&#x27;s an example of how
+you should be able to explain your editor choice:&lt;&#x2F;p&gt;
+&lt;p&gt;I use neovim for most of my programming. I like it because of several reasons.
+The vim style keybindings are great once you get to know them well. While other
+editors have vim keybinding plugins and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;vscode-neovim&#x2F;vscode-neovim&quot;&gt;VSCode even supports using fully
+embedded neovim instance&lt;&#x2F;a&gt;,
+there are other reasons I prefer neovim. It&#x27;s extremely lightweight and feels
+snappy. It doesn&#x27;t rely on a GUI and as a result you can use neovim or vim
+(which is available by default on many linux distros) when you SSH into a
+server. Finally, I like how extensible it is and how vibrant the community is.
+It supports LSP and as a result you can use neovim to program any language with
+a language server. You have access to many APIs that let you hook into existing
+functionality, and the use of lua as the configuration&#x2F;scripting language makes
+configuring neovim feel easier than VSCode and more fun.&lt;&#x2F;p&gt;
+&lt;p&gt;While I&#x27;ve spent a lot of time talking about editors in this section so far,
+that is not the only focus. CLI and GUI apps&#x2F;tools of all kinds are included in
+this section. Even editor plugins can be included. A tool is anything that
+makes your life easier, and finding the right one is important. Another great
+example of tools is the entire class of tools that hook into git. Whether it be
+a full graphical frontend for git like github desktop, or editor integrations
+such as those found in VSCode or Jetbrains IDEs they can make your life easier.
+A git tool I use extensively is
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lewis6991&#x2F;gitsigns.nvim&quot;&gt;gitsigns&lt;&#x2F;a&gt; for neovim. It allows
+you to stage or reset hunks so you can perform git operations on portions of
+files. While you could do that from the git CLI, tools to make this easier
+exist, so why shouldn&#x27;t you use them?&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;use-and-customize-keybindings&quot;&gt;Use (And Customize) Keybindings&lt;&#x2F;h1&gt;
+&lt;p&gt;Another seemingly obvious way to speed yourself up is to use keybindings. It
+seems obvious, but a shocking number of people I&#x27;ve watched program don&#x27;t use
+them where they probably should be. Keybindings exist to speed up repetitive
+tasks such as commenting code or allow for convenient access to functionality
+that is incredibly useful such as variable renaming or searching for a word.
+Designers of IDEs and text editors make these because they think that they
+functions users should have quick access to. So at the very least we might as
+well make these developers work worth it and use them.&lt;&#x2F;p&gt;
+&lt;p&gt;The less obvious part of this is keybind customization. Editor designers aren&#x27;t
+omniscient, so they don&#x27;t know what keybinds you will end up using the most, or
+never use. Also, the keybinding you may find useful may be completely useless
+to someone else who uses their editor a little bit differently. This is why you
+should customize your keybinds. Ones you use often should be easy to input and
+you probably don&#x27;t need to keep ones that you&#x27;ll never use.&lt;&#x2F;p&gt;
+&lt;p&gt;Another advantage of setting bindings yourself is increased familiarity with
+them. You are much more likely to remember and use bindings you make. Not only
+is that keybind important enough to where you think you need to set it to
+something, you will also have a reason as to why you set the binding to the
+keys you do.&lt;&#x2F;p&gt;
+&lt;p&gt;Personally, in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lcroberts&#x2F;nvim-config&quot;&gt;my neovim config&lt;&#x2F;a&gt; I
+have set many of my keybindings manually and made new ones for actions I
+wanted. While I kept many of the universally accepted ones, the keybinds I
+commonly use are different than everyone else, and that is reflected in the
+config. The advantage of the way neovim handles binding is that you can assign
+a binding that does any sequence of keypresses or even lua code. This means I
+even have some keybinds that move my cursor to the end of a line and input a
+semicolon. Someone else may use primarily whitespace based languages and never
+use that, but for me it&#x27;s incredibly useful and a small but frequent time
+saver.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;there-s-almost-always-a-better-way-to-do-things&quot;&gt;There&#x27;s (Almost) Always A Better Way To Do Things&lt;&#x2F;h1&gt;
+&lt;p&gt;This last section is less concrete advice and more of a mindset you should get
+into. If you are ever doing something and it feels slow, there is probably a
+better way to do it. I run into this all the time. I find myself doing a
+repetitive task and I think to myself &amp;quot;There has to be a better way to do this&amp;quot;
+and so far I&#x27;ve been right almost every time. This thought has lead me to learn
+about vim macros, as well as the &amp;lt;C-a&amp;gt; shortcut while in visual mode (Sets
+incrementing values). It&#x27;s these small things I pick up every time that
+compound with each new addition and continually speed me up. Any time you have
+the thought that there is a better way to do something, try to find the better
+way. Sometimes it won&#x27;t be obvious but often taking the time to find it can be
+worth it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;learn-from-other-developers&quot;&gt;Learn From Other Developers&lt;&#x2F;h2&gt;
+&lt;p&gt;A great way to find new ways to do things is to watch other developers and see
+if they are doing anything that you didn&#x27;t know about. I&#x27;ve picked up several
+new trick that I figured out after watching a youtuber called
+&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;c&#x2F;theprimeagen&quot;&gt;ThePrimeagen&lt;&#x2F;a&gt;. Other developers
+(particularly those with more experience than you) probably know a few tricks
+you don&#x27;t know and if they seem like something you&#x27;d like to know how to do,
+take the time to learn how they did it. Don&#x27;t just think &amp;quot;Hey that was neat, I
+wonder how they did that.&amp;quot; Instead, ask them how they did it or try to figure
+it out yourself. Often times people are willing to share things if you ask nice
+enough. They are especially willing to share if it&#x27;s something they figured out
+themselves and they think it&#x27;s clever.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

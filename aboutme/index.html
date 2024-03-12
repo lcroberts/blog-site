@@ -1,0 +1,204 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!-- FAVICON -->
+      
+      
+      <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+      
+      
+      <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+      
+      
+      <link href='&#x2F;icons&#x2F;android-chrome-512x512.png' rel="android-chrome" sizes="512x512" />
+      
+      
+      <link href='&#x2F;icons&#x2F;android-chrome-192x192.png' rel="android-chrome" sizes="192x192" />
+      
+      
+      <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+      
+      
+      <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+      
+
+      <link href="/css/main.css" rel="stylesheet">
+      <link id="syntax_highlight" href="#" rel="stylesheet">
+
+      <title>
+        
+        
+        
+      </title>
+  </head>
+  <body class="dark:bg-gray-700 flex flex-col h-screen justify-between">
+  <!---------------------------------------------------------->
+  <!------------------------- NAVBAR ------------------------->
+  <!---------------------------------------------------------->
+  <nav id="navbar" class="bg-gray-200 dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <div class="flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button id="toggle-mobile-menu" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+              Heroicon name: outline/menu
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!--
+              Icon when menu is open.
+              Heroicon name: outline/x
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 flex items-center">
+          <div class="flex-shrink-0 flex items-center ml-2">
+            <a href="/" class="text-xl text-gray-800 dark:text-white">lcroberts</a>
+            <!-- <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
+            <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow"> -->
+          </div>
+          <div class="hidden sm:block sm:ml-6">
+            <div class="nav-links flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              
+                
+                  
+                    <a href="&#x2F;" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                  
+                    <a href="&#x2F;aboutme" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Me</a>
+                  
+                    <a href="&#x2F;Resume.pdf" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Resume</a>
+                  
+                    <a href="&#x2F;blog" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                  
+                    <a href="&#x2F;categories" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Categories</a>
+                  
+                    <a href="&#x2F;tags" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Tags</a>
+                  
+                
+              
+
+              
+            </div>
+          </div>
+
+          
+
+        <!---------------------------- Sidebar Menu ---------------------------->
+        
+
+        
+        <!-- Theme switch button -->
+        <div class="flex p-2">
+          <button id="switch-theme" type="button" class="bg-gray-200 text-gray-800 hover:text-gray-900 dark:bg-gray-800 dark:text-gray-400 dark:hover:text-white p-1 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+            <span class="sr-only">Switch Theme</span>
+            <!-- Heroicon name: outline/light -->
+            <svg id="light" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+            <!-- Heroicon name: outline/dark -->
+            <svg id="dark" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!----------------------------- Mobile menu ----------------------------->
+    <div id="mobile-menu" class="sm:hidden fixed z-10 overflow-hidden">
+      <div class="nav-links flex flex-col space-y-4 items-center w-screen dark:bg-gray-800 transition-all ease-out duration-500 h-0">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        
+          
+            
+              <a href="&#x2F;" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            
+              <a href="&#x2F;aboutme" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Me</a>
+            
+              <a href="&#x2F;Resume.pdf" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Resume</a>
+            
+              <a href="&#x2F;blog" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+            
+              <a href="&#x2F;categories" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Categories</a>
+            
+              <a href="&#x2F;tags" class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Tags</a>
+            
+          
+        
+
+        
+      </div>
+    </div>
+  </nav>
+  <!----------------------------------------------------------->
+  <!------------------------- CONTENT ------------------------->
+  <!----------------------------------------------------------->
+  <main class="max-w-7xl mx-auto text-black dark:text-gray-200 w-full mb-auto">
+    
+<div class="flex items-center flex-col mt-10">
+  <h1 class="text-2xl text-bold mb-6">
+    About Me
+  </h1>
+  <div class="flex flex-col gap-y-6 w-full px-4 sm:w-2/3">
+    <hr />
+<p>My name is Logan Roberts. I am a computer science student at the University of North Carolina at Greensboro (UNCG). I have experience programming in java, python, c, and scripting in bash. As of July 19, 2023 I have the &quot;AWS Certified Developer - Associate&quot; certification.</p>
+<p>Most of my Java experience comes from school where I learned it as my first language. We are generally required to use it for assignments as it is what everyone knows and can collaborate with. I taught myself some basic python a while back and used it for scripting for a while. It was great for creating scripts on Windows. I also used it extensively in a data science class I took. We used jupyter notebooks and popular data science python modules which was helpful in getting more comfortable with python. I have some amount of programming experience with C, which I used in a systems programming class. I also write a fair amount of bash scripts. Many of them are simple wrapper scripts, and none of them are very complex, but I'm trying to get better at bash to write more useful scripts for myself.</p>
+<p>I am a fairly competent linux user as well. I got started with linux when I decided to use a VPS to host some video game servers for me and my friends. Around this time I got curious about linux and started playing around with it in virtual machines though I never got very far in it. After I upgraded my computer and added a second NVME SSD to it, I decided to install linux bare metal and try using it as a daily driver. It was rough for a little while, but now I'm incredibly comfortable with it and much prefer it over other operating system choices. My first distro was Fedora Workstation, but over time I started getting into customization and tiling window managers. Due to that I'm now on Arch where it's a little bit easier to get some newer packages such as the hyprland window manager, or swaylock-effects for a better looking lock screen.</p>
+<p>I really enjoy doing system tinkering/customization when I have a lot of free time. The main reason is that I feel I understand a lot more about my system, the more I do it. The more I understand the more I feel I can get out of it, and I feel like I get more done as a result. It's the same reason I tend to use neovim as my editor for pretty much everything but java. I understand it much better after going through the configuration process and I know what features I've added to it. All of my configurations can be found in <a href="https://github.com/lcroberts/dotfiles">this github repo:</a> <a href="https://github.com/lcroberts/dotfiles">https://github.com/lcroberts/dotfiles</a>.</p>
+<p>Below is a list of useful CS courses I took at UNCG, with my grade in them and my takeaways of the class:</p>
+<p>Various data structures and algorithms classes: These include CSC 130, 230, 250, 350, and 330. I got an A in all of these classes and they provided the foundational knowledge I needed and basic coding practice to get more comfortable.</p>
+<p>Software Engineering (CSC 340): I got an A in this class. This class helped me to understand software development models and gain experience with collaborating with others through the semester-long project. It also gave me experience with HTML, basic CSS, and Spring Boot, as well as Spring Security for securing our webpage.</p>
+<p>System Programming (CSC 362): I got an A in this class. It gave me experience with C programming and helped to cover some of the gaps in my OS concept knowledge that I did not learn from my tinkering with linux. It also covered some programming concepts I had not learned in other classes. These included, multi-threading, processes, and basic networking and security considerations.</p>
+<p>Data Science (CSC 405): I got an A in this class. This class helped me improve my python skills and learn how to leverage various python libraries for data manipulation and visualization.</p>
+<p>Courses I am Currently Taking:</p>
+<p>Concepts of Programming Languages (CSC 339)</p>
+<p>Principles of Computer Security (CSC 481)</p>
+<p>Principles of Operating Systems (CSC 462)</p>
+
+  </div>
+</div>
+
+  </main>
+
+  <!----------------------------------------------------------->
+  <!------------------------- PAGINATION ---------------------->
+  <!----------------------------------------------------------->
+  
+  
+
+  <!---------------------------------------------------------->
+  <!------------------------- FOOTER ------------------------->
+  <!---------------------------------------------------------->
+  <footer class="max-w-7xl mx-auto relative pt-1 px-2 border-b-2 border-gray-300 dark:border-gray-200 w-full">
+    <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
+      <div class="sm:w-2/3 text-center py-6">
+        <p class="text-sm text-black dark:text-white font-bold mb-2">
+          Made using a modified version of the <a href="https://www.getzola.org/themes/blow/">blow</a> theme for <a href="https://www.getzola.org/" target="_blank">Zola</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!------------------------- SCRIPTS ------------------------->
+  <script defer src="/js/main.js"></script>
+  
+  <!--  -->
+  
+  
+  </body>
+</html>
