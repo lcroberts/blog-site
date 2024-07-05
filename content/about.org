@@ -1,0 +1,13 @@
+#+title: About Me
+
+My name is Logan Roberts. I am a computer science student at the University of
+North Carolina at Greensboro (UNCG). I enjoy tinkering with computer hardware
+and love to build computers, whether it's for myself or helping my friends who
+aren't as computer savvy. I tinker quite a bit with computer software as well.
+For that reason I love linux and the ability to configure it to be exactly how
+I like it. My configuration for programs I use can be found in my
+[[https://github.com/lcroberts/dotfiles][dotfiles repo]]. Recently I've enjoyed
+coding in Go, but I also have experience with PHP through an internship, as
+well as Java and C through school. I've also done a bit of scripting in bash
+and python. I have also tried a lot of other languages, but mainly out of
+curiosity and not to the degree where I'm competent.
