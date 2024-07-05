@@ -6,24 +6,12 @@ paginate = 10
 languageCode = "en"
 theme = "tailwind"
 
-[params]
-  # dir name of your blog content (default is `content/posts`).
-  # the list of set content will show up on your index page (baseurl).
-  contentTypeName = "blog"
-
-  [params.header]
-    logo = "logo.webp"
-
-  [params.footer]
-    since = 2023
-    poweredby = false
-
 [menu]
 
   [[menu.main]]
     identifier = "blog"
     name = "Blog"
-    pageRef = "/posts"
+    pageRef = "/blog"
     weight = 0
 
   [[menu.main]]

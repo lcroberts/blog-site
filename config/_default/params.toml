@@ -4,7 +4,7 @@ subtitle = ""
 
 # dir name of your blog content (default is `content/posts`).
 # the list of set content will show up on your index page (baseurl).
-contentTypeName = "posts"
+contentTypeName = "blog"
 
 # Show table of contents at the top of your posts (defaults to false)
 # Alternatively, add this param to post front matter for specific posts
@@ -24,9 +24,9 @@ jsonLD = false
   minMatchCharLength = 2 # https://www.fusejs.io/api/options.html#minmatchcharlength
   threshold = 0.3 # https://www.fusejs.io/api/options.html#threshold
 
-# [header]
-#   logo = "logo.webp"
-#   sticky = false
+[header]
+  logo = "logo.webp"
+  sticky = false
 
 [footer]
   since = 2023
