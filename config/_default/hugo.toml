@@ -29,4 +29,3 @@ theme = "tailwind"
 [taxonomies]
 category = "categories"
 tag = "tags"
-series = "series"

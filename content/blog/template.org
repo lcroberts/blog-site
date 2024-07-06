@@ -1,0 +1,31 @@
+#+Title: Template
+#+date: [2024-07-06 Sat]
+#+lastmod: [2024-07-06 Sat]
+#+categories[]: Productivity
+#+tags[]: OrgMode Hugo
+#+images[]: images/blog/making-a-website/dns-records.png
+#+weight: 10
+#+toc: true
+#+property: :tangle .go
+
+* Example Content
+  This is some top level content
+
+** Sub content
+  #+attr_html: :alt Test Alt Text :title Test Title
+  #+caption: Caption text
+  [[/images/blog/making-a-website/dns-records.png]]
+
+* Top level content
+  [[{{< ref home-row-mods.org >}}][Test reference]]
+
+* Source Code
+  #+BEGIN_SRC go :tangle yes
+  package main
+
+  import "fmt"
+
+  func main() {
+  	fmt.Println("This is an example code block")
+  }
+  #+END_SRC

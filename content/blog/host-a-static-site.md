@@ -116,7 +116,7 @@ lcroberts.dev, an SOA email address, and you can choose what kind of default
 records to insert. To make things easy you can select "Insert default records
 from one of my Linodes" and then select the instance you are planning to host
 the site on. This will generate records that look something like this: ![Image
-of dns records](/img/blog/making-a-website/dns-records.png)
+of dns records](/images/blog/making-a-website/dns-records.png)
 
 From here you will want to go to your domain regirstrar and change the name
 servers to those listed under the NS Record section of the domain page. Once
