@@ -1,10 +1,9 @@
-+++
-title = "Speeding Up Your Software Development Workflow"
-date = "2024-01-26"
-[taxonomies]
-categories=["opinion"]
-tags=["coding","opinion","text editing"]
-+++
+#+Title: Speeding Up Your Software Development Workflow 
+#+date: [2024-01-26 Fri]
+#+lastmod: [2024-07-06 Sat]
+#+categories[]: Productivity
+#+tags[]: Coding Opinion
+#+toc: true
 
 Note: This is the written version of a presentation I am giving to the UNCG competitive programming club 01-29-2024
 
@@ -24,7 +23,7 @@ something you think will help only ends up slowing you down. While this warning
 doesn't apply to everything in this blog post, it's still something good to
 keep in mind.
 
-# Keep Your Brain As Your Bottleneck
+* Keep Your Brain As Your Bottleneck
 
 Software development is problem solving, and our most useful tool in problem
 solving is our brain. When working on a problem we don't want our brain to be
@@ -38,7 +37,7 @@ code. If you can get quick enough the bottleneck of code away from your hands
 and into your brain. This lets us get more use out of our most valuable tool,
 our brain.
 
-# Learn To Type Fast
+* Learn To Type Fast
 
 The most obvious way to get faster at writing code is to type faster. This even
 seems like one of those things that shouldn't even need to be said. However,
@@ -50,14 +49,15 @@ increase typing speed, though it may take some time. All you have to do is
 actively practice. A little bit every day helps a lot.
 
 There are two main ways I personally practice typing. The first and most
-readily available way is [monkeytype](https://monkeytype.com/). It is open
-source and the github repo can be found
-[here.](https://github.com/Instagram/MonkeyType) It's a great way to practice
-typing plain English words. There are a few tips I have to get the most of it.
-Actively push your typing speed, don't just passively type. Without pushing
-yourself you won't notice any speedups. Also, try to type words instead of
-letters. By this I mean try to get to the point where you don't think about the
-letters you are typing and instead are just focusing on the words.
+  readily available way is [[https://monkeytype.com/][monkeytype]]. It is open
+  source and the github repo can be found
+  [[https://github.com/Instagram/MonkeyType][here.]] It's a great way to
+  practice typing plain English words. There are a few tips I have to get the
+  most of it. Actively push your typing speed, don't just passively type.
+  Without pushing yourself you won't notice any speedups. Also, try to type
+  words instead of letters. By this I mean try to get to the point where you
+  don't think about the letters you are typing and instead are just focusing on
+  the words.
 
 Another good way to practice typing speed is by writing notes. While in class I
 tend to take notes as both a way to stay focused and to practice typing. The
@@ -69,7 +69,7 @@ monkeytype. Your brain needs to primarily be focused elsewhere and typing
 should be almost on autopilot. This much more closely mimics how we should be
 doing things
 
-# Tools Make Your Job Easier (and Faster)
+* Tools Make Your Job Easier (and Faster)
 
 Another obvious way to speed up your software development workflow is to use
 tools made for the jobs you're trying to do. The "best" tool is often up to
@@ -88,16 +88,17 @@ you should be able to explain your editor choice:
 
 I use neovim for most of my programming. I like it because of several reasons.
 The vim style keybindings are great once you get to know them well. While other
-editors have vim keybinding plugins and [VSCode even supports using fully
-embedded neovim instance](https://github.com/vscode-neovim/vscode-neovim),
-there are other reasons I prefer neovim. It's extremely lightweight and feels
-snappy. It doesn't rely on a GUI and as a result you can use neovim or vim
-(which is available by default on many linux distros) when you SSH into a
-server. Finally, I like how extensible it is and how vibrant the community is.
-It supports LSP and as a result you can use neovim to program any language with
-a language server. You have access to many APIs that let you hook into existing
-functionality, and the use of lua as the configuration/scripting language makes
-configuring neovim feel easier than VSCode and more fun.
+editors have vim keybinding plugins and
+[[https://github.com/vscode-neovim/vscode-neovim][VSCode even supports using
+fully embedded neovim instance]], there are other reasons I prefer neovim. It's
+extremely lightweight and feels snappy. It doesn't rely on a GUI and as a
+result you can use neovim or vim (which is available by default on many linux
+distros) when you SSH into a server. Finally, I like how extensible it is and
+how vibrant the community is. It supports LSP and as a result you can use
+neovim to program any language with a language server. You have access to many
+APIs that let you hook into existing functionality, and the use of lua as the
+configuration/scripting language makes configuring neovim feel easier than
+VSCode and more fun.
 
 While I've spent a lot of time talking about editors in this section so far,
 that is not the only focus. CLI and GUI apps/tools of all kinds are included in
@@ -107,12 +108,12 @@ example of tools is the entire class of tools that hook into git. Whether it be
 a full graphical frontend for git like github desktop, or editor integrations
 such as those found in VSCode or Jetbrains IDEs they can make your life easier.
 A git tool I use extensively is
-[gitsigns](https://github.com/lewis6991/gitsigns.nvim) for neovim. It allows
+[[https://github.com/lewis6991/gitsigns.nvim][gitsigns]] for neovim. It allows
 you to stage or reset hunks so you can perform git operations on portions of
 files. While you could do that from the git CLI, tools to make this easier
 exist, so why shouldn't you use them?
 
-# Use (And Customize) Keybindings
+* Use (And Customize) Keybindings
 
 Another seemingly obvious way to speed yourself up is to use keybindings. It
 seems obvious, but a shocking number of people I've watched program don't use
@@ -136,37 +137,37 @@ is that keybind important enough to where you think you need to set it to
 something, you will also have a reason as to why you set the binding to the
 keys you do.
 
-Personally, in [my neovim config](https://github.com/lcroberts/nvim-config) I
-have set many of my keybindings manually and made new ones for actions I
-wanted. While I kept many of the universally accepted ones, the keybinds I
-commonly use are different than everyone else, and that is reflected in the
-config. The advantage of the way neovim handles binding is that you can assign
-a binding that does any sequence of keypresses or even lua code. This means I
-even have some keybinds that move my cursor to the end of a line and input a
-semicolon. Someone else may use primarily whitespace based languages and never
-use that, but for me it's incredibly useful and a small but frequent time
-saver.
+Personally, in [[https://github.com/lcroberts/nvim-config][my neovim config]] I
+  have set many of my keybindings manually and made new ones for actions I
+  wanted. While I kept many of the universally accepted ones, the keybinds I
+  commonly use are different than everyone else, and that is reflected in the
+  config. The advantage of the way neovim handles binding is that you can
+  assign a binding that does any sequence of keypresses or even lua code. This
+  means I even have some keybinds that move my cursor to the end of a line and
+  input a semicolon. Someone else may use primarily whitespace based languages
+  and never use that, but for me it's incredibly useful and a small but
+  frequent time saver.
 
-# There's (Almost) Always A Better Way To Do Things
+* There's (Almost) Always A Better Way To Do Things
 
 This last section is less concrete advice and more of a mindset you should get
-into. If you are ever doing something and it feels slow, there is probably a
-better way to do it. I run into this all the time. I find myself doing a
-repetitive task and I think to myself "There has to be a better way to do this"
-and so far I've been right almost every time. This thought has lead me to learn
-about vim macros, as well as the \<C-a> shortcut while in visual mode (Sets
-incrementing values). It's these small things I pick up every time that
-compound with each new addition and continually speed me up. Any time you have
-the thought that there is a better way to do something, try to find the better
-way. Sometimes it won't be obvious but often taking the time to find it can be
-worth it.
+  into. If you are ever doing something and it feels slow, there is probably a
+  better way to do it. I run into this all the time. I find myself doing a
+  repetitive task and I think to myself "There has to be a better way to do
+  this" and so far I've been right almost every time. This thought has lead me
+  to learn about vim macros, as well as the */g<C-a>/* shortcut while in visual
+  mode (Sets incrementing values). It's these small things I pick up every time
+  that compound with each new addition and continually speed me up. Any time
+  you have the thought that there is a better way to do something, try to find
+  the better way. Sometimes it won't be obvious but often taking the time to
+  find it can be worth it.
 
-## Learn From Other Developers
+** Learn From Other Developers
 
 A great way to find new ways to do things is to watch other developers and see
 if they are doing anything that you didn't know about. I've picked up several
 new trick that I figured out after watching a youtuber called
-[ThePrimeagen](https://www.youtube.com/c/theprimeagen). Other developers
+[[https://www.youtube.com/c/theprimeagen][ThePrimeagen]]. Other developers
 (particularly those with more experience than you) probably know a few tricks
 you don't know and if they seem like something you'd like to know how to do,
 take the time to learn how they did it. Don't just think "Hey that was neat, I
