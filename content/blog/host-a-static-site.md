@@ -1,21 +1,20 @@
-#+Title: Making and Hosting a Static Site (The Hard Way)
-#+date: [2023-08-10 Thu]
-#+lastmod: [2024-07-06 Sat]
-#+categories[]: Tutorial
-#+tags[]: Linux ServerAdmin
-#+toc: true
++++
+title = "Making and Hosting a Static Site (The Hard Way)"
+author = ["Logan Roberts"]
+date = 2023-08-10T00:00:00-04:00
+categories = ["Tutorial"]
+tags = ["Linux", "Server Admin"]
+draft = false
+toc = true
++++
 
-#+BEGIN_QUOTE 
-
-Edit as of January 12, 2024: I have switched over to hosting on
-github pages. While this was a great experience to go through and I learned a
-lot, I have not been as diligent maintaining it as I would have liked and the
-site occasionally had ssl issues. Sometimes it's best to do things the hard way
-for the learning experience and then switch to the easy way to avoid problems.
-
-As of July 6, 2024 I have also moved over to the hugo static site generator as well.
-
-#+END_QUOTE
+> Edit as of January 12, 2024: I have switched over to hosting on
+> github pages. While this was a great experience to go through and I learned a
+> lot, I have not been as diligent maintaining it as I would have liked and the
+> site occasionally had ssl issues. Sometimes it's best to do things the hard way
+> for the learning experience and then switch to the easy way to avoid problems.
+>
+> As of July 6, 2024 I have also moved over to the hugo static site generator as well.
 
 This is a guide on making a website using a static site generator and
 self-hosting it on a VPS. It'll also walk through getting a domain, setting up
@@ -29,18 +28,18 @@ learning experience. If you do want to use GitHub pages instead of a VPS there
 are plenty of guides for that as well.
 
 
-* Making the Site
+## Making the Site {#making-the-site}
 
 While it doesn't really matter which order you do the first 2 steps in, making
 a site takes the longest while the rest can all be done in one go. To make the
 site you can use any static site generator of your choice. I'm using
-[[https://www.getzola.org/][zola]] but you can use Jekyll, Hugo, or any of the
+[zola](https://www.getzola.org/) but you can use Jekyll, Hugo, or any of the
 other myriad of options.
 
 If you decide to use zola, you'll first need to install it as per your
 operating system. Once you do that you'll need to find a theme you want to use,
 unless you're comfortable with html and css and want to make one yourself.
-Personally I'm using [[https://www.getzola.org/themes/blow/][blow]]. You'll want
+Personally I'm using [blow](https://www.getzola.org/themes/blow/). You'll want
 to initialize a git repo and run "zola init" within it. Using git allows you to
 roll back changes if you make a mistake and will also be what powers the
 automatic deployment of our site. Most zola themes generally have you add the
@@ -59,27 +58,30 @@ you can customize/configure the theme, and add content.
 
 Here are a few things that might help with the process:
 
-- All content that is transformed into a webpage will be put into the content folder.
-- Anything that will be embedded in a page should be put into the static folder. The content can then be accessed by using the path to the content using the static folder as the root. So if you have an image with the path "static/img/blog/example.png" you can access it with the markdown:
+-   All content that is transformed into a webpage will be put into the content folder.
+-   Anything that will be embedded in a page should be put into the static folder. The content can then be accessed by using the path to the content using the static folder as the root. So if you have an image with the path "static/img/blog/example.png" you can access it with the markdown:
 
-#+BEGIN_SRC markdown
+<!--listend-->
+
+```markdown
 ![alt_text_here](/img/blog/example.png)
-#+END_SRC
+```
 
-- Folders without content will not be tracked by the git repo. This can cause problems if you do not add any custom templates into the templates directory as zola requires the folder to be present to build a website. To get around this you can put a filler text file in the template directory. You can also clone the repo elsewhere and run "zola build" to see if the project will properly build or is missing a required folder.
+-   Folders without content will not be tracked by the git repo. This can cause problems if you do not add any custom templates into the templates directory as zola requires the folder to be present to build a website. To get around this you can put a filler text file in the template directory. You can also clone the repo elsewhere and run "zola build" to see if the project will properly build or is missing a required folder.
 
 Once you feel your site is where you want it to be you can move onto the next
 step. If you are stuck you can see if you can find any solutions to your
-problems by looking at [[https://github.com/lcroberts/blog-site][my git repo]].
+problems by looking at [my git repo](https://github.com/lcroberts/blog-site).
 
-* Getting a Domain
+
+## Getting a Domain {#getting-a-domain}
 
 Before you can do much else you will need a domain. There are free options such
-as [[https://www.duckdns.org/][duck dns]], but I recommend buying a domain name
+as [duck dns](https://www.duckdns.org/), but I recommend buying a domain name
 and using that. You can buy your domain from any domain registrar such as
-[[https://www.cloudflare.com/products/registrar/][Cloudflare]] or [[https://domains.google/][Google
-Domains]]. Personally I'm using
-[[https://www.namecheap.com/][namecheap]] for no other reason that I was able to
+[Cloudflare](https://www.cloudflare.com/products/registrar/) or [Google
+Domains](https://domains.google/). Personally I'm using
+[namecheap](https://www.namecheap.com/) for no other reason that I was able to
 save a few bucks by going through them. If you see anything about buying SSL
 certificates anywhere you can ignore those as we will be getting those
 ourselves as part of setting up a VPS.
@@ -91,13 +93,14 @@ for about $10 a year. Once you purchase a domain it will take a little bit for
 the whole registration process to complete. While waiting you can continue on
 with the guide.
 
-* Setting up DNS
+
+## Setting up DNS {#setting-up-dns}
 
 To set up DNS we will need to know the IP address we will be pointing to. To
 get this we need to provision a VPS (I recommend using either Debian or Ubuntu
 as the OS. I will be using Debian though all commands should be that same on
 Ubuntu.), while you can use any provider I personally use
-[[https://www.linode.com/][Linode]]. I do this for 2 reasons, they have their own
+[Linode](https://www.linode.com/). I do this for 2 reasons, they have their own
 DNS name servers and there is a linode plugin for certbot (though Linode
 doesn't support DNSSEC), and I've been using them for a while since they have
 fairly rich doccumentation and a wide variety of guides.
@@ -116,16 +119,18 @@ button you will then be prompted to enter your domain, so for me that was
 lcroberts.dev, an SOA email address, and you can choose what kind of default
 records to insert. To make things easy you can select "Insert default records
 from one of my Linodes" and then select the instance you are planning to host
-the site on. This will generate records that look something like this: ![Image
+the site on. This will generate records that look something like this: \![Image
 of dns records](/images/blog/making-a-website/dns-records.png)
 
 From here you will want to go to your domain regirstrar and change the name
 servers to those listed under the NS Record section of the domain page. Once
 you do that you are ready to move onto the next step.
 
-* Setting up a VPS and a Github Action
 
-** Securing The Server
+## Setting up a VPS and a Github Action {#setting-up-a-vps-and-a-github-action}
+
+
+### Securing The Server {#securing-the-server}
 
 Before we do anything else we will first want to do some basic security setup
 for the server. If you do not already have an SSH key you use you will want to
@@ -149,18 +154,18 @@ few things we need to do. All commands have been tested for Debian 11, though
 they should work the same for any Debian derivative such as Ubuntu. First we
 will want to run
 
-#+BEGIN_SRC bash
+```bash
 sudo apt update && sudo apt upgrade
-#+END_SRC
+```
 
 This ensures all packages on the system are up to date. We are currently logged
 in as the root user which is a bad security practice, so we will want to make a
 new user and make sure that user has sudo privileges. This process can vary
 slightly but for Debian based distros you can run
 
-#+BEGIN_SRC bash
+```bash
 sudo useradd -mg sudo username_here
-#+END_SRC
+```
 
 This creates a new user with a home directory and adds them to the sudo group.
 This allows them to run commands with root privileges but we will want to
@@ -168,10 +173,10 @@ protect this behind a password so we will run the following command to setup a
 password for the user as well as change the users shell to bash which allows
 for command completion.
 
-#+BEGIN_SRC bash
+```bash
 sudo passwd username_here
 sudo chsh -s /bin/bash username_here
-#+END_SRC
+```
 
 This will prompt you to enter a password for the user. Make this something you
 will be able to remember and that you can easily put in. Next we will want to
@@ -180,10 +185,10 @@ as root. We will test this by using the newly added user to install rsync which
 will be required to automatically deploy website changes. To do this run the
 following commands:
 
-#+BEGIN_SRC bash
+```bash
 su username_here
 sudo apt install rsync
-#+END_SRC
+```
 
 Assuming you did everything correctly you should be prompted to enter the users
 password and rsync should be installed or apt will tell you that the package is
@@ -191,10 +196,10 @@ already installed. Next we will want to set up pubic key authentication and
 disable password authentication as well as root login over SSH. First, while
 logged in as the user, run the following commands:
 
-#+BEGIN_SRC bash
+```bash
 mkdir .ssh
 touch .ssh/authorized_keys
-#+END_SRC
+```
 
 After this you will need to get the public key from your SSH keypair you made
 earlier. Then you will want to open the authorized_keys file using your command
@@ -202,9 +207,9 @@ line text editor of choice. Common options are vi/vim and nano. For beginners
 nano may be easier but learning the vi keybinds can be very valuable. The
 command using nano is:
 
-#+BEGIN_SRC bash
+```bash
 nano .ssh/authorized_keys
-#+END_SRC
+```
 
 You will then want to copy the public key to your clipboard then use
 ctrl+shift+v to paste the key into the file. Then press ctrl+x and answer yes
@@ -214,17 +219,17 @@ you did it correctly. Enter "exit" repeatedly until you've exited the SSH
 prompt, then enter the following command to connect to the server as your new
 user.
 
-#+BEGIN_SRC bash
+```bash
 ssh username_here@server_ip
-#+END_SRC
+```
 
 If it lets you in without a prompt for your password then the SSH key
 authentication worked. Now we will want to change the SSH daemon setting to
 disable password authentication and root login. To do this run:
 
-#+BEGIN_SRC bash
+```bash
 sudo nano /etc/ssh/sshd_config
-#+END_SRC
+```
 
 First, explicitly enable public key authentication by uncommenting the line
 "#PubkeyAuthentication yes". You do this by removing the '#' symbol. Next find
@@ -233,67 +238,68 @@ the line that contains "PermitRootLogin", uncomment it, and change the value to
 it, and change the value to no. Save your changes and run the following
 command:
 
-#+BEGIN_SRC bash
+```bash
 sudo systemctl restart sshd
-#+END_SRC
+```
 
 This restarts the SSH daemon and ensures that our configuration options apply.
 
-** Setting up the Webserver
+
+### Setting up the Webserver {#setting-up-the-webserver}
 
 Before setting up the webserver we will set up the script for getting and
 installing our SSL certificates. First, assuming you are using Linode for your
 name servers you will want to get a Linode API token. You can do this by
-clicking [[https://cloud.linode.com/profile/tokens][here]], clicking "Create A
+clicking [here](https://cloud.linode.com/profile/tokens), clicking "Create A
 Personal Access Token", setting the expiry to never, and removing all
 permissions aside from Read/Write for domains. You will then want to download
 the token. Next you will want to run the following commands:
 
-#+BEGIN_SRC bash
+```bash
 mkdir .secrets
 nano .secrets/linode.ini
-#+END_SRC
+```
 
 Once you are editing the linode.ini file enter the following text and enter your actual API key.
 
-#+BEGIN_SRC bash
+```bash
 # Linode API credentials used by Certbot
 dns_linode_key = your_api_key_here
 dns_linode_version = 4
-#+END_SRC
+```
 
 While I'm sure there are more secure ways of doing this, this should be fine
 for our purposes. From here we will want to make a script that will
 automatically request and install our SSL certificates. To do this you can run
 the following commands:
 
-#+BEGIN_SRC bash
+```bash
 touch certs.sh
 chmod +x certs.sh
 nano certs.sh
-#+END_SRC
+```
 
 Then enter the following text and insert your domain:
 
-#+BEGIN_SRC bash
+```bash
 #!/bin/bash
 
 sudo certbot --dns-linode -d "your.domain, *.your.domain" --dns-linode-credentials ~/.secrets/linode.ini --installer nginx
-#+END_SRC
+```
 
 Next we will install nginx, certbot, and the required plugins by running the following command:
 
-#+BEGIN_SRC bash
+```bash
 sudo apt install nginx python3-certbot python3-certbot-dns-linode python3-certbot-nginx
-#+END_SRC
+```
 
-From this point I recommend following [[https://youtu.be/ATenAnk8eX4?si=vHhu8tO2M5jbBp-l&t=137][this]] guide by Wolfgang. His tutorial runs
+From this point I recommend following [this](https://youtu.be/ATenAnk8eX4?si=vHhu8tO2M5jbBp-l&t=137) guide by Wolfgang. His tutorial runs
 you through creating a deploy user, configuring nginx, and creating the GitHub
 action to deploy your changes to your server. The only thing you will want to
 do different than his tutorial is to run our certs.sh script to install the SSL
 certificates instead of the command he provides. You can do this by navigation
 to the home directory and running the following:
 
-#+BEGIN_SRC bash
+```bash
 ./certs.sh
-#+END_SRC
+```

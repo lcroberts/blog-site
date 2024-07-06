@@ -1,8 +1,11 @@
-#+Title: Why I Switched To Home Row Modifier Keys 
-#+date: [2024-03-12 Tue]
-#+lastmod: [2024-07-06 Sat]
-#+categories[]: Opinion
-#+tags[]: Coding Ergonomics
++++
+title = "Why I Switched To Home Row Modifier Keys"
+author = ["Logan Roberts"]
+date = 2024-03-12T00:00:00-04:00
+categories = ["Tips and Tricks"]
+tags = ["Coding", "Ergonomics", "Configuration"]
+draft = false
++++
 
 The day has come where I have to pay attention to my keyboard ergonomics. This
 realization came to me as I was finishing going through the book "Writing An
@@ -13,7 +16,7 @@ of hotkeys and I found myself frequently putting my hands in weird unnatural
 positions, which is what I believe led to the discomfort in my hands.
 
 I loosely knew about the idea of ergonomic split keyboards which eventually
-brought me to [[https://www.youtube.com/watch?v=pK41Mr4Kdd0][this]] video by
+brought me to [this](https://www.youtube.com/watch?v=pK41Mr4Kdd0) video by
 Code to the Moon. In it they talk about their own keyboard rabbit hole and some
 of the things they learned along the way. The thing that immediately grabbed my
 attention when I heard about it was the idea of home row modifier keys. This
@@ -25,7 +28,7 @@ set it up on my keyboard.
 
 After a little big of looking around I found a wonderful guide on how to set up
 home row mods in QMK. If you are interested you can find it
-[[https://precondition.github.io/home-row-mods][here]]. It goes through all the
+[here](https://precondition.github.io/home-row-mods). It goes through all the
 settings and common ways people set it up. One thing gave me an issue, that
 being the setting HOLD_ON_OTHER_KEY_PRESS. It makes it so that if another key
 is pressed down before one of your modifier keys is fully released, then the
@@ -42,7 +45,7 @@ does take a little bit to get used to so far I am enjoying them and I can see
 more key map customizations in my future.
 
 It took a good bit of tinkering to land on my configuration which can be seen
-[[https://github.com/lcroberts/dotfiles/tree/main/keyboards/keychron_q5_pro][here]].
+[here](https://github.com/lcroberts/dotfiles/tree/main/keyboards/keychron_q5_pro).
 The left hand home rows are in the following order (right to left): GUI
 (Meta/Windows key), Control, Shift, Alt. I also added a toggle to take me to a
 layer where the home row modifiers are disabled so that I can still play games

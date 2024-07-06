@@ -1,9 +1,12 @@
-#+Title: Speeding Up Your Software Development Workflow 
-#+date: [2024-01-26 Fri]
-#+lastmod: [2024-07-06 Sat]
-#+categories[]: Productivity
-#+tags[]: Coding Opinion
-#+toc: true
++++
+title = "Speeding Up Your Software Development Workflow"
+author = ["Logan Roberts"]
+date = 2024-01-26T00:00:00-05:00
+categories = ["Tips and Tricks"]
+tags = ["Opinion", "Coding"]
+draft = false
+toc = true
++++
 
 Note: This is the written version of a presentation I am giving to the UNCG competitive programming club 01-29-2024
 
@@ -23,7 +26,8 @@ something you think will help only ends up slowing you down. While this warning
 doesn't apply to everything in this blog post, it's still something good to
 keep in mind.
 
-* Keep Your Brain As Your Bottleneck
+
+## Keep Your Brain As Your Bottleneck {#keep-your-brain-as-your-bottleneck}
 
 Software development is problem solving, and our most useful tool in problem
 solving is our brain. When working on a problem we don't want our brain to be
@@ -37,7 +41,8 @@ code. If you can get quick enough the bottleneck of code away from your hands
 and into your brain. This lets us get more use out of our most valuable tool,
 our brain.
 
-* Learn To Type Fast
+
+## Learn To Type Fast {#learn-to-type-fast}
 
 The most obvious way to get faster at writing code is to type faster. This even
 seems like one of those things that shouldn't even need to be said. However,
@@ -49,9 +54,9 @@ increase typing speed, though it may take some time. All you have to do is
 actively practice. A little bit every day helps a lot.
 
 There are two main ways I personally practice typing. The first and most
-  readily available way is [[https://monkeytype.com/][monkeytype]]. It is open
+  readily available way is [monkeytype](https://monkeytype.com/). It is open
   source and the github repo can be found
-  [[https://github.com/Instagram/MonkeyType][here.]] It's a great way to
+  [here.](https://github.com/Instagram/MonkeyType) It's a great way to
   practice typing plain English words. There are a few tips I have to get the
   most of it. Actively push your typing speed, don't just passively type.
   Without pushing yourself you won't notice any speedups. Also, try to type
@@ -69,7 +74,8 @@ monkeytype. Your brain needs to primarily be focused elsewhere and typing
 should be almost on autopilot. This much more closely mimics how we should be
 doing things
 
-* Tools Make Your Job Easier (and Faster)
+
+## Tools Make Your Job Easier (and Faster) {#tools-make-your-job-easier--and-faster}
 
 Another obvious way to speed up your software development workflow is to use
 tools made for the jobs you're trying to do. The "best" tool is often up to
@@ -89,8 +95,8 @@ you should be able to explain your editor choice:
 I use neovim for most of my programming. I like it because of several reasons.
 The vim style keybindings are great once you get to know them well. While other
 editors have vim keybinding plugins and
-[[https://github.com/vscode-neovim/vscode-neovim][VSCode even supports using
-fully embedded neovim instance]], there are other reasons I prefer neovim. It's
+[VSCode even supports using
+fully embedded neovim instance](https://github.com/vscode-neovim/vscode-neovim), there are other reasons I prefer neovim. It's
 extremely lightweight and feels snappy. It doesn't rely on a GUI and as a
 result you can use neovim or vim (which is available by default on many linux
 distros) when you SSH into a server. Finally, I like how extensible it is and
@@ -108,12 +114,13 @@ example of tools is the entire class of tools that hook into git. Whether it be
 a full graphical frontend for git like github desktop, or editor integrations
 such as those found in VSCode or Jetbrains IDEs they can make your life easier.
 A git tool I use extensively is
-[[https://github.com/lewis6991/gitsigns.nvim][gitsigns]] for neovim. It allows
+[gitsigns](https://github.com/lewis6991/gitsigns.nvim) for neovim. It allows
 you to stage or reset hunks so you can perform git operations on portions of
 files. While you could do that from the git CLI, tools to make this easier
 exist, so why shouldn't you use them?
 
-* Use (And Customize) Keybindings
+
+## Use (And Customize) Keybindings {#use--and-customize--keybindings}
 
 Another seemingly obvious way to speed yourself up is to use keybindings. It
 seems obvious, but a shocking number of people I've watched program don't use
@@ -137,7 +144,7 @@ is that keybind important enough to where you think you need to set it to
 something, you will also have a reason as to why you set the binding to the
 keys you do.
 
-Personally, in [[https://github.com/lcroberts/nvim-config][my neovim config]] I
+Personally, in [my neovim config](https://github.com/lcroberts/nvim-config) I
   have set many of my keybindings manually and made new ones for actions I
   wanted. While I kept many of the universally accepted ones, the keybinds I
   commonly use are different than everyone else, and that is reflected in the
@@ -148,26 +155,28 @@ Personally, in [[https://github.com/lcroberts/nvim-config][my neovim config]] I
   and never use that, but for me it's incredibly useful and a small but
   frequent time saver.
 
-* There's (Almost) Always A Better Way To Do Things
+
+## There's (Almost) Always A Better Way To Do Things {#there-s--almost--always-a-better-way-to-do-things}
 
 This last section is less concrete advice and more of a mindset you should get
   into. If you are ever doing something and it feels slow, there is probably a
   better way to do it. I run into this all the time. I find myself doing a
   repetitive task and I think to myself "There has to be a better way to do
   this" and so far I've been right almost every time. This thought has lead me
-  to learn about vim macros, as well as the */g<C-a>/* shortcut while in visual
+  to learn about vim macros, as well as the **_g&lt;C-a&gt;_** shortcut while in visual
   mode (Sets incrementing values). It's these small things I pick up every time
   that compound with each new addition and continually speed me up. Any time
   you have the thought that there is a better way to do something, try to find
   the better way. Sometimes it won't be obvious but often taking the time to
   find it can be worth it.
 
-** Learn From Other Developers
+
+### Learn From Other Developers {#learn-from-other-developers}
 
 A great way to find new ways to do things is to watch other developers and see
 if they are doing anything that you didn't know about. I've picked up several
 new trick that I figured out after watching a youtuber called
-[[https://www.youtube.com/c/theprimeagen][ThePrimeagen]]. Other developers
+[ThePrimeagen](https://www.youtube.com/c/theprimeagen). Other developers
 (particularly those with more experience than you) probably know a few tricks
 you don't know and if they seem like something you'd like to know how to do,
 take the time to learn how they did it. Don't just think "Hey that was neat, I
