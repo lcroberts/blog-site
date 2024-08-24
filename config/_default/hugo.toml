@@ -20,11 +20,11 @@ theme = "tailwind"
     pageRef = "/about"
     weight = 10
 
-  [[menu.main]]
-    identifier = "resume"
-    name = "Resume"
-    url = "/resume.pdf"
-    weight = 10
+  # [[menu.main]]
+  #   identifier = "resume"
+  #   name = "Resume"
+  #   url = "/resume.pdf"
+  #   weight = 10
 
 [taxonomies]
 category = "categories"
