@@ -4,7 +4,7 @@ author = "Logan Roberts"
 copyright = "Logan Roberts"
 paginate = 10
 languageCode = "en"
-theme = "tailwind"
+theme = "tailwind-modified"
 
 [menu]
 
