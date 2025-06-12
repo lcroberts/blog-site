@@ -1,9 +1,11 @@
 <footer class="w-full bg-crust">
   <div class="w-full mx-auto max-w-screen-2xl p-4 md:flex md:items-center md:justify-between">
-    <span class="text-sm">&copy; 2025
-      <a href="https://lcroberts.dev" class="hover:underline">
-        Logan Roberts
-      </a>. All Rights Reserved.
+    <span class="text-sm">&copy; <span id="copyright-year"></span>
+      <a href="https://lcroberts.dev" class="hover:underline">Logan Roberts</a>. All Rights Reserved.
     </span>
   </div>
 </footer>
+
+<script>
+  document.querySelector("#copyright-year").innerHTML = (new Date()).getFullYear()
+</script>
