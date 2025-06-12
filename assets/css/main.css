@@ -16,7 +16,7 @@
 --color-sapphire: #74c7ec;
 --color-blue: #89b4fa;
 --color-lavender: #b4befe;
---color-text: #cdd6f4;
+--color-cat-text: #cdd6f4;
 --color-subtext-1: #bac2de;
 --color-subtext-0: #a6adc8;
 --color-overlay-2: #9399b2;
@@ -28,4 +28,10 @@
 --color-base: #1e1e2e;
 --color-mantle: #181825;
 --color-crust: #11111b;
+}
+
+/* Set default styles */
+html {
+  @apply text-cat-text;
+  @apply bg-base;
 }

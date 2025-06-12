@@ -8,12 +8,13 @@
   <title>{{ .Page.Title }}</title>
 </head>
 
-<body>
+<body class="flex flex-col justify-between min-h-screen">
   {{ partialCached "navbar.html" . }}
-  <main class="container mx-auto">
+  <main class="container max-w-screen-2xl mx-auto h-full mb-auto">
     {{ block "main" . }}
     {{ end }}
   </main>
+  {{ partialCached "footer.html" . }}
 </body>
 
 </html>
