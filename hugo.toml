@@ -1,12 +1,12 @@
 baseURL = 'https://lcroberts.dev/'
 languageCode = 'en-us'
 title = 'lcroberts'
+sectionPagesMenu = 'main'
 
 [params]
   author = 'Logan Roberts'
   copyright_from = '2022'
 
-sectionPagesMenu = 'main'
 [menus]
   [[menu.main]]
     name = "Home"
