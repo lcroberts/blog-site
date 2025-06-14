@@ -1,4 +1,43 @@
+// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+document.documentElement.classList.toggle(
+  "dark",
+  localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches),
+);
+// Whenever the user explicitly chooses light mode
+// localStorage.theme = "light";
+// Whenever the user explicitly chooses dark mode
+// localStorage.theme = "dark";
+// Whenever the user explicitly chooses to respect the OS preference
+// localStorage.removeItem("theme");
+
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#copyright-year").innerHTML =
     new Date().getFullYear();
+
+  const lightSwitches = document.querySelectorAll(".light-switch");
+  if (lightSwitches.length > 0) {
+    lightSwitches.forEach((lightSwitch, i) => {
+      if (document.documentElement.classList.contains("dark")) {
+        lightSwitch.checked = true;
+      }
+      lightSwitch.onchange = () => {
+        console.debug("changed");
+        const { checked } = lightSwitch;
+        lightSwitches.forEach((el, n) => {
+          if (n !== i) {
+            el.checked = checked;
+          }
+        });
+        if (lightSwitch.checked) {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        }
+      };
+    });
+  }
 });
