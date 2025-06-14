@@ -95,3 +95,7 @@ html {
   @apply text-cat-text;
   @apply bg-base;
 }
+
+a.active {
+  @apply text-rosewater;
+}

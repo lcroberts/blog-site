@@ -10,12 +10,12 @@
 </head>
 
 <body class="flex flex-col justify-between min-h-screen">
-  {{ partialCached "navbar.html" . }}
+  {{ partial "navbar.html" .}}
   <main class="container max-w-screen-2xl mx-auto h-full mb-auto">
     {{ block "main" . }}
     {{ end }}
   </main>
-  {{ partialCached "footer.html" . }}
+  {{ partial "footer.html" . }}
 </body>
 
 </html>

@@ -1,14 +1,10 @@
+{{ $page := . }}
 <nav class="w-full bg-mantle text-text py-2">
-  <div class="container mx-auto max-w-screen-2xl flex justify-between">
+  <div class="container mx-auto max-w-screen-2xl flex justify-between px-4">
     <div id="navbarLeft" class="flex gap-4">
-      {{ with site.Menus.main }}
-      {{ range . }}
-      {{ if $.IsMenuCurrent .Menu . }}
-      <a class="active" aria-current="page" href="{{ .URL }}">{{ .Name }}</a>
-      {{ else }}
-      <a href="{{ .URL }}">{{ .Name }}</a>
-      {{ end }}
-      {{ end }}
+      {{ range site.Menus.main }}
+      {{ $isCurrent := or ($page.IsMenuCurrent .Menu .) ($page.HasMenuCurrent .Menu .) }}
+      <a class='{{ if $isCurrent }}active{{ end }}' href="{{ .URL }}">{{ .Name }}</a>
       {{ end }}
     </div>
     <div id="navbarRight" class="flex">
