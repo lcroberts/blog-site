@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
         lightSwitch.checked = true;
       }
       lightSwitch.onchange = () => {
-        console.debug("changed");
         const { checked } = lightSwitch;
         lightSwitches.forEach((el, n) => {
           if (n !== i) {
