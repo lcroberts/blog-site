@@ -1,6 +1,15 @@
-<div class="w-full bg-mantle text-text py-2">
+<nav class="w-full bg-mantle text-text py-2">
   <div class="container mx-auto max-w-screen-2xl flex justify-between">
-    <div id="navbarLeft flex">
+    <div id="navbarLeft" class="flex gap-4">
+      {{ with site.Menus.main }}
+      {{ range . }}
+      {{ if $.IsMenuCurrent .Menu . }}
+      <a class="active" aria-current="page" href="{{ .URL }}">{{ .Name }}</a>
+      {{ else }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+      {{ end }}
+      {{ end }}
     </div>
     <div id="navbarRight" class="flex">
       <div class="flex flex-col justify-center ml-3">
@@ -22,4 +31,4 @@
       </div>
     </div>
   </div>
-</div>
+</nav>

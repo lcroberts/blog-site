@@ -2,6 +2,17 @@ baseURL = 'https://lcroberts.dev/'
 languageCode = 'en-us'
 title = 'lcroberts'
 
+[params]
+  author = 'Logan Roberts'
+  copyright_from = '2022'
+
+sectionPagesMenu = 'main'
+[menus]
+  [[menu.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 10
+
 [build]
   [build.buildStats]
     enable = true
