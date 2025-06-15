@@ -1,31 +1,82 @@
 {{ $page := . }}
-<nav class="w-full bg-mantle text-text py-2">
-  <div class="container mx-auto max-w-screen-2xl flex justify-between px-4 items-center">
-    <div id="navbarLeft" class="flex gap-4">
-      <a href="/">{{ .Site.Title }}</a>
+<!-- https://webcrunch.com/posts/responsive-tailwind-navbar -->
+<nav class="bg-mantle">
+  <div class="container mx-auto px-4 md:flex items-center gap-4">
+    <!-- Logo -->
+    <div class="flex items-center justify-between md:w-auto w-full">
+      <a href="/" class="flex items-center py-3 px-2 flex-1">
+        <span class="font-bold">{{ .Site.Title }}</span>
+      </a>
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex items-center">
+        <button class="mobile-menu-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <title>bars-3-bottom-left</title>
+            <g fill="none">
+              <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Primary Navigation -->
+    <div
+      class="navigation-menu hidden md:flex md:flex-row flex-col items-center justify-start md:space-x-1 pb-3 md:pb-0">
       {{ range site.Menus.main }}
       {{ $isCurrent := or ($page.IsMenuCurrent .Menu .) ($page.HasMenuCurrent .Menu .) }}
-      <a class='{{ if $isCurrent }}active{{ end }} hover:underline hover:text-peach!' href="{{ .URL }}">{{ .Name }}</a>
+      <a href="{{ .URL }}" class="py-2 px-3 block {{ if $isCurrent }}active{{ end }}">{{ .Name }}</a>
       {{ end }}
-    </div>
-    <div id="navbarRight" class="flex">
-      <div class="flex flex-col justify-center">
-        <input id="dark-mode-toggle" type="checkbox" name="light-switch" class="light-switch sr-only" />
-        <label class="relative cursor-pointer p-2" for="dark-mode-toggle">
-          <svg class="dark:hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-            <path class="fill-rosewater"
-              d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
-            <path class="fill-rosewater" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
-          </svg>
-          <svg class="hidden dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-            <path class="fill-rosewater"
-              d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z" />
-            <path class="fill-rosewater"
-              d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z" />
-          </svg>
-          <span class="sr-only">Switch to light / dark version</span>
-        </label>
-      </div>
+
+
+      <!-- Dropdown Menu -->
+      <!-- <div class="relative"> -->
+      <!--   <button class="dropdown-toggle py-2 px-3 hover:bg-gray-700 flex items-center gap-2 rounded"> -->
+      <!--     <span class="pointer-events-none">Services</span> -->
+      <!--     <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> -->
+      <!--       <title>chevron-down</title> -->
+      <!--       <g fill="none"> -->
+      <!--         <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> -->
+      <!--       </g> -->
+      <!--     </svg> -->
+      <!--   </button> -->
+      <!--   <div class="dropdown-menu absolute hidden bg-gray-700 text-white rounded-b-lg pb-2 w-48"> -->
+      <!--     <a href="#" class="block px-6 py-2 hover:bg-gray-800">Web Design</a> -->
+      <!--     <a href="#" class="block px-6 py-2 hover:bg-gray-800">Development</a> -->
+      <!--     <a href="#" class="block px-6 py-2 hover:bg-gray-800">SEO</a> -->
+      <!--   </div> -->
+      <!-- </div> -->
     </div>
   </div>
 </nav>
+
+<!-- <nav class="w-full bg-mantle text-text py-2"> -->
+<!--   <div class="container mx-auto max-w-screen-2xl flex justify-between px-4 items-center"> -->
+<!--     <div id="navbarLeft" class="flex gap-4"> -->
+<!--       <a href="/">{{ .Site.Title }}</a> -->
+<!--       {{ range site.Menus.main }} -->
+<!--       {{ $isCurrent := or ($page.IsMenuCurrent .Menu .) ($page.HasMenuCurrent .Menu .) }} -->
+<!--       <a class='{{ if $isCurrent }}active{{ end }} hover:underline hover:text-peach!' href="{{ .URL }}">{{ .Name }}</a> -->
+<!--       {{ end }} -->
+<!--     </div> -->
+<!--     <div id="navbarRight" class="flex"> -->
+<!--       <div class="flex flex-col justify-center"> -->
+<!--         <input id="dark-mode-toggle" type="checkbox" name="light-switch" class="light-switch sr-only" /> -->
+<!--         <label class="relative cursor-pointer p-2" for="dark-mode-toggle"> -->
+<!--           <svg class="dark:hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg"> -->
+<!--             <path class="fill-rosewater" -->
+<!--               d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" /> -->
+<!--             <path class="fill-rosewater" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" /> -->
+<!--           </svg> -->
+<!--           <svg class="hidden dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg"> -->
+<!--             <path class="fill-rosewater" -->
+<!--               d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z" /> -->
+<!--             <path class="fill-rosewater" -->
+<!--               d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z" /> -->
+<!--           </svg> -->
+<!--           <span class="sr-only">Switch to light / dark version</span> -->
+<!--         </label> -->
+<!--       </div> -->
+<!--     </div> -->
+<!--   </div> -->
+<!-- </nav> -->
