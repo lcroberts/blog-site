@@ -28,10 +28,7 @@ copyright = "Logan Roberts"
     target = 'css'
   [[build.cachebusters]]
     source = 'assets/.*\.(js|ts|jsx|tsx)'
-    target = 'js'
-  [[build.cachebusters]]
-    source = 'assets/.*\.(js|ts|jsx|tsx)'
-    target = 'css'
+    target = '(js|css)'
   [[build.cachebusters]]
     source = 'assets/.*\.(.*)$'
     target = '$1'
