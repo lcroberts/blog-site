@@ -10,7 +10,7 @@ function handleNavbar() {
   const mobileMenu = document.querySelector(".navigation-menu");
 
   mobileMenuButton.addEventListener("click", () => {
-    mobileMenu.classList.toggle("max-h-24");
+    mobileMenu.classList.toggle("max-h-30");
   });
 }
 
