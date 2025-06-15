@@ -1,14 +1,15 @@
 {{ $page := . }}
 <nav class="w-full bg-mantle text-text py-2">
-  <div class="container mx-auto max-w-screen-2xl flex justify-between px-4">
+  <div class="container mx-auto max-w-screen-2xl flex justify-between px-4 items-center">
     <div id="navbarLeft" class="flex gap-4">
+      <a href="/">{{ .Site.Title }}</a>
       {{ range site.Menus.main }}
       {{ $isCurrent := or ($page.IsMenuCurrent .Menu .) ($page.HasMenuCurrent .Menu .) }}
-      <a class='{{ if $isCurrent }}active{{ end }}' href="{{ .URL }}">{{ .Name }}</a>
+      <a class='{{ if $isCurrent }}active{{ end }} hover:underline hover:text-peach!' href="{{ .URL }}">{{ .Name }}</a>
       {{ end }}
     </div>
     <div id="navbarRight" class="flex">
-      <div class="flex flex-col justify-center ml-3">
+      <div class="flex flex-col justify-center">
         <input id="dark-mode-toggle" type="checkbox" name="light-switch" class="light-switch sr-only" />
         <label class="relative cursor-pointer p-2" for="dark-mode-toggle">
           <svg class="dark:hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
