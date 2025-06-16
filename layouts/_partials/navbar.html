@@ -25,7 +25,7 @@
     </div>
     <!-- Primary Navigation -->
     <div
-      class="navigation-menu max-h-0 md:max-h-8 overflow-hidden transition-all ease-linear md:transition-none duration-250 md:flex md:flex-row flex-col items-center justify-start md:space-x-1">
+      class="navigation-menu max-h-0 md:max-h-8 overflow-hidden transition-[max-height] ease-linear md:transition-none duration-250 md:flex md:flex-row flex-col items-center justify-start md:space-x-1">
       {{ range site.Menus.main }}
       {{ $isCurrent := or ($page.IsMenuCurrent .Menu .) ($page.HasMenuCurrent .Menu .) }}
       <a href="{{ .URL }}" class="py-2 px-3 block hover:text-peach! {{ if $isCurrent }}active{{ end }} last:pb-3 last:md:pb-2">{{ .Name }}</a>
