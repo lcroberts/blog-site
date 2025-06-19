@@ -1,0 +1,13 @@
+{{ $github := resources.Get "logos/github-mark.svg"}}
+{{ $github_dark := resources.Get "logos/github-mark-white.svg"}}
+{{ $linked := resources.Get "logos/InBug-Black.png"}}
+{{ $linked_dark := resources.Get "logos/InBug-White.png"}}
+
+<a href="https://www.linkedin.com/in/logan-roberts-075659266/" target="_blank">
+  <img src="{{ $linked.RelPermalink }}" alt="LinkedIn Logo" class="dark:hidden w-5 h-5" />
+  <img src="{{ $linked_dark.RelPermalink }}" alt="LinkedIn Logo" class="hidden dark:block w-5 h-5" />
+</a>
+<a href="https://github.com/lcroberts" target="_blank">
+  <img src="{{ $github.RelPermalink }}" alt="Github Logo" class="dark:hidden w-5 h-5" />
+  <img src="{{ $github_dark.RelPermalink }}" alt="Github Logo" class="hidden dark:block w-5 h-5" />
+</a>

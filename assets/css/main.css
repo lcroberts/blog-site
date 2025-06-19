@@ -1,5 +1,8 @@
 @import "tailwindcss";
+
 @source "assets/js/**.js";
+@source "content/"
+@source "layout/"
 @source "hugo_stats.json";
 
 @custom-variant dark (&:where(.dark, .dark *));

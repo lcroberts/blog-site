@@ -18,7 +18,8 @@
       <a href="/" class="flex items-center py-3 px-2 flex-1">
         <span class="font-bold hover:text-peach!">{{ .Site.Title }}</span>
       </a>
-      <div class="md:hidden flex items-center gap-2">
+      <div class="md:hidden flex items-center gap-3">
+        {{ partial "logo_links.html" . }}
         <!-- Mobile Dark Toggle -->
         {{ partial "dark_mode_toggle.html" (dict "context" . "id" "dark-mode-toggle-mobile") }}
       </div>
@@ -28,11 +29,14 @@
       class="navigation-menu max-h-0 md:max-h-8 overflow-hidden transition-[max-height] ease-linear md:transition-none duration-250 md:flex md:flex-row flex-col items-center justify-start md:space-x-1">
       {{ range site.Menus.main }}
       {{ $isCurrent := or ($page.IsMenuCurrent .Menu .) ($page.HasMenuCurrent .Menu .) }}
-      <a href="{{ .URL }}" class="py-2 px-3 block hover:text-peach! {{ if $isCurrent }}active{{ end }} last:pb-3 last:md:pb-2">{{ .Name }}</a>
+      <a href="{{ .URL }}"
+        class="py-2 px-3 block hover:text-peach! {{ if $isCurrent }}active{{ end }} last:pb-3 last:md:pb-2">{{ .Name
+        }}</a>
       {{ end }}
     </div>
     <!-- Desktop Dark Mode Toggle -->
-    <div class="hidden md:block ms-auto">
+    <div class="hidden md:flex ms-auto items-center gap-3">
+      {{ partial "logo_links.html" . }}
       {{ partial "dark_mode_toggle.html" (dict "context" . "id" "dark-mode-toggle") }}
     </div>
   </div>
