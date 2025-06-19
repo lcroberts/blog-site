@@ -1,5 +1,5 @@
 +++
-title = "About Me"
+title = "Home"
 author = ["Logan Roberts"]
 draft = false
 +++

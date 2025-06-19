@@ -1,7 +1,13 @@
+{{ $linked := resources.Get "logos/rss-black.svg"}}
+{{ $linked_dark := resources.Get "logos/rss-white.svg"}}
 <footer class="w-full bg-crust">
   <div class="w-full mx-auto max-w-screen-2xl p-4 md:flex md:items-center md:justify-between">
     <span class="text-sm">&copy; {{ .Site.Params.copyright_from }}-<span id="copyright-year">{{ time.Now.Year }}</span>
       <a href="/" class="hover:underline">{{ .Site.Copyright }}</a>
     </span>
+    <a href="/index.xml" target="_blank">
+      <img src="{{ $linked.RelPermalink }}" alt="LinkedIn Logo" class="dark:hidden w-5 h-5 opacity-65" />
+      <img src="{{ $linked_dark.RelPermalink }}" alt="LinkedIn Logo" class="hidden dark:block w-5 h-5" />
+    </a>
   </div>
 </footer>
