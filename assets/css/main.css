@@ -100,17 +100,24 @@ html {
   @apply bg-base;
 }
 
-a.active {
-  @apply text-flamingo;
-}
-
 .link-hover {
   position: relative;
   text-decoration: none;
+  background-clip: text;
+  color: transparent;
+  transition: background-position 0.3s;
+  background-size: 200% 100%;
+  background-color: var(--color-cat-text);
+  background-image: linear-gradient(to right, var(--color-peach) 50%, var(--color-cat-text) 50%);
+  background-position: 100% 0;
+}
+
+a.active {
+  background-image: linear-gradient(to right, var(--color-peach) 50%, var(--color-flamingo) 50%);
 }
 
 .link-hover:hover {
-  color: var(--color-peach);
+  background-position: 0 0;
 }
 
 .link-hover::before {
