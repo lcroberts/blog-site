@@ -4,7 +4,7 @@ title = 'lcroberts'
 copyright = "Logan Roberts"
 
 [params]
-  author = 'Logan Roberts'
+  author = ['Logan Roberts']
   copyright_from = '2022'
 
 [menus]
