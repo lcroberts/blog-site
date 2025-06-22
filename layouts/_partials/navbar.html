@@ -1,6 +1,6 @@
 {{ $page := . }}
 <nav class="bg-crust">
-  <div class="container mx-auto px-4 md:flex items-center gap-4">
+  <div class="mx-auto px-4 md:flex items-center gap-4">
     <!-- Logo -->
     <div class="flex items-center justify-between md:w-auto w-full">
       <div class="md:hidden flex items-center gap-2 pe-3">
@@ -15,7 +15,7 @@
           </svg>
         </button>
       </div>
-      <a href="/" class="flex items-center py-3 px-2 flex-1">
+      <a href="/" class="link-hover flex items-center my-3 mx-2 flex-1">
         <span class="font-bold hover:text-peach!">{{ .Site.Title }}</span>
       </a>
       <div class="md:hidden flex items-center gap-3">
@@ -30,7 +30,7 @@
       {{ range site.Menus.main }}
       {{ $isCurrent := or ($page.IsMenuCurrent .Menu .) ($page.HasMenuCurrent .Menu .) }}
       <a href="{{ .URL }}"
-        class="py-2 px-3 block hover:text-peach! {{ if $isCurrent }}active{{ end }} last:pb-3 last:md:pb-2">{{ .Name
+        class="my-2 mx-3 block link-hover {{ if $isCurrent }}active{{ end }} last:mb-3 last:md:mb-2">{{ .Name
         }}</a>
       {{ end }}
     </div>
