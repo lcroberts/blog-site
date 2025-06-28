@@ -137,3 +137,33 @@ a.active {
 .link-hover:hover::before {
   transform: scaleX(1);
 }
+
+ul.pagination {
+  @apply flex;
+  @apply justify-center;
+  @apply gap-4;
+  @apply text-crust;
+  @apply mt-6;
+  @apply h-fit;
+
+  li.page-item {
+    @apply h-fit;
+
+    a {
+      @apply p-2;
+      @apply bg-blue;
+      @apply rounded;
+    }
+
+    a[aria-current='page'] {
+      @apply bg-lavender;
+      @apply cursor-default;
+    }
+  }
+
+  li.disabled {
+    a {
+      @apply hidden;
+    }
+  }
+}

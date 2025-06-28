@@ -2,7 +2,7 @@
 <div>
   {{ $pages := where site.RegularPages "Type" "blog" }}
   {{ $pages := $pages.ByDate.Reverse}}
-  {{ $paginator := .Paginate $pages 5 }}
+  {{ $paginator := .Paginate $pages 10 }}
 
   <div class="flex flex-col max-w-screen-xl space-y-6">
     {{ range $paginator.Pages }}
