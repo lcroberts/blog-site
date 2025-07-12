@@ -11,12 +11,10 @@
         <a href="{{ .RelPermalink}}">{{ .LinkTitle }}</a>
       </h2>
       <div>{{ .Summary }}</div>
-      <div class="flex gap-4">
+      <div class="flex gap-2 flex-col md:gap-4 md:flex-row">
+        <div><i class="bi bi-person-square"></i> {{ delimit .Params.author ", " }}</div>
         <div><i class="bi bi-calendar2-week-fill"></i> {{ .Date.Format "January 2, 2006" }}</div>
         <div><i class="bi bi-hourglass-split"></i> {{ printf "%d Minutes" .ReadingTime }}</div>
-      </div>
-      <div>
-        By: {{ delimit .Params.author ", " }}
       </div>
       {{ if (or .Params.categories .Params.tags) }}
       <ul class="flex flex-row flex-wrap gap-2">
