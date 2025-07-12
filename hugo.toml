@@ -2,6 +2,7 @@ baseURL = 'https://lcroberts.dev/'
 languageCode = 'en-us'
 title = 'lcroberts'
 copyright = "Logan Roberts"
+summaryLength = 30
 
 [params]
   author = ['Logan Roberts']
