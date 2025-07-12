@@ -114,7 +114,7 @@ html {
 }
 
 a {
-  @apply text-blue;
+  @apply text-blue underline hover:text-mauve active:text-mauve;
 }
 
 a.active {
