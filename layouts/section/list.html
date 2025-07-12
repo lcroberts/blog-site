@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div>
-  {{ $pages := where site.RegularPages "Type" "blog" }}
+  {{ $pages := where site.RegularPages "Type" .Section }}
   {{ $pages := $pages.ByDate.Reverse}}
   {{ $paginator := .Paginate $pages 10 }}
 
