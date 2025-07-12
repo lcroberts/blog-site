@@ -27,7 +27,7 @@ copyright = "Logan Roberts"
     source = '(postcss|tailwind)\.config\.js'
     target = 'css'
   [[build.cachebusters]]
-    source = 'assets/.*\.(js|ts|jsx|tsx)'
+    source = 'assets/.*\.(js|ts|jsx|tsx|scss)'
     target = '(js|css)'
   [[build.cachebusters]]
     source = 'assets/.*\.(.*)$'
@@ -36,6 +36,15 @@ copyright = "Logan Roberts"
   [[module.mounts]]
     source = 'assets'
     target = 'assets'
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "node_modules/bootstrap-icons/font/fonts"
+    target = "static/css/fonts"
+  [[module.mounts]]
+    source = "node_modules/bootstrap-icons/"
+    target = "assets/css/bootstrap-icons"
   [[module.mounts]]
     disableWatch = true
     source = 'hugo_stats.json'

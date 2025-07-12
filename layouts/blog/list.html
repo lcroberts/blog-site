@@ -6,9 +6,11 @@
 
   <div class="flex flex-col max-w-screen-xl m-4 lg:mx-auto my-8 space-y-6">
     {{ range $paginator.Pages }}
-    <div class="rounded bg-surface-0 p-4">
-      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-      <div>Estimated Reading Time: {{ printf "%d Minutes" .ReadingTime }}</div>
+    <div class="rounded bg-surface-0 p-4 text-subtext-0">
+      <h2 class="text-2xl text-cat-text">
+        <a href="{{ .RelPermalink}}">{{ .LinkTitle }}</a>
+      </h2>
+      <div><i class="bi bi-hourglass-split"></i>{{ printf "%d Minutes" .ReadingTime }}</div>
       <div>
         By:
         {{ delimit .Params.author ", " }}
