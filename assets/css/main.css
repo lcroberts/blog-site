@@ -113,6 +113,10 @@ html {
   background-position: 100% 0;
 }
 
+a {
+  @apply text-blue;
+}
+
 a.active {
   background-image: linear-gradient(to right, var(--color-peach) 50%, var(--color-flamingo) 50%);
 }
