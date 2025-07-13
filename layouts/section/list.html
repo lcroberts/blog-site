@@ -30,7 +30,7 @@
         {{ if .Params.tags }}
         {{ range (.GetTerms "tags") }}
         <li>
-          <a href="{{ .Page.RelPermalink }}/" class="">
+          <a href="{{ .Page.RelPermalink }}/" class="taxonomy-tag">
             <i class="bi bi-tag"></i> <span class="">{{ .LinkTitle }}</span>
           </a>
         </li>

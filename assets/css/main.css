@@ -138,6 +138,9 @@ html {
   }
 }
 
+.taxonomy-tag {
+  color: var(--color-red) !important;
+}
 
 a.active {
   background-image: linear-gradient(to right, var(--color-peach) 50%, var(--color-flamingo) 50%);
