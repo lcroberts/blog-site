@@ -164,6 +164,20 @@ html {
   }
 }
 
+#TableOfContents {
+  ul {
+    margin-left: 1rem;
+    list-style-type: disc;
+  }
+  li {
+    @apply my-2;
+  }
+
+  a {
+    @apply text-blue hover:text-mauve;
+  }
+}
+
 .taxonomy-tag {
   color: var(--color-red) !important;
 }
