@@ -6,7 +6,7 @@
 
   <div class="flex flex-col max-w-screen-xl m-4 lg:mx-auto my-8 space-y-6">
     {{ range $paginator.Pages }}
-    <div class="rounded bg-surface-0 p-4 text-subtext-0 flex flex-col gap-2">
+    <div class="rounded bg-surface-0 p-4 text-subtext-0 flex flex-col gap-4">
       <h2 class="text-2xl text-blue hover:text-mauve underline">
         <a href="{{ .RelPermalink}}">{{ .LinkTitle }}</a>
       </h2>
@@ -17,11 +17,11 @@
         <div><i class="bi bi-hourglass-split"></i> {{ printf "%d Minutes" .ReadingTime }}</div>
       </div>
       {{ if (or .Params.categories .Params.tags) }}
-      <ul class="flex flex-row flex-wrap gap-2">
+      <ul class="flex flex-row flex-wrap gap-4">
         {{ if .Params.categories }}
         {{ range (.GetTerms "categories") }}
         <li>
-          <a href="{{ .Page.RelPermalink }}/" class="bg-lavender text-crust rounded p-1">
+          <a href="{{ .Page.RelPermalink }}/" class="bg-peach text-crust rounded p-1">
             {{ .LinkTitle }}
           </a>
         </li>
