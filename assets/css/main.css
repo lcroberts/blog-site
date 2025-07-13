@@ -120,22 +120,47 @@ html {
   }
 
   h1 {
-    @apply text-red;
+    @apply text-red text-4xl;
   }
+
   h2 {
-    @apply text-peach;
+    @apply text-peach text-3xl;
   }
+
   h3 {
-    @apply text-yellow;
+    @apply text-yellow text-2xl;
   }
+
   h4 {
-    @apply text-green;
+    @apply text-green text-xl;
   }
+
   h5 {
-    @apply text-sapphire;
+    @apply text-sapphire text-lg;
   }
+
   h6 {
     @apply text-lavender;
+  }
+
+  blockquote {
+    @apply italic font-bold px-4;
+  }
+
+  :not(.chroma)>code {
+    @apply bg-surface-0 px-2 rounded;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  li {
+    @apply ms-4 my-2;
   }
 }
 
@@ -197,4 +222,8 @@ ul.pagination {
       @apply hidden;
     }
   }
+}
+
+#md-content {
+  @apply flex flex-col gap-4;
 }
