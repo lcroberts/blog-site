@@ -1,9 +1,16 @@
 {{ define "main" }}
 <div class="bg-mantle rounded-lg p-8 my-8">
-  <div class="my-4">
-    <h1 class="text-4xl text-red mb-4">Table of Contents</h1>
-    {{ .TableOfContents }}
+  <h1 class="text-4xl !text-red mb-4">{{ .Title }}</h1>
+
+  {{ if ne .TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
+  <!-- the variable is not an empty navigation -->
+  <div class="mb-4">
+    <h2 class="text-3xl text-peach mb-4">Table of Contents</h1>
+      {{ .TableOfContents }}
   </div>
+  <!-- it's a dot because we are inside of a `with` -->
+  {{ end }}
+
   <div id="md-content" class="text-content">
     {{ .Content }}
   </div>
