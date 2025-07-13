@@ -11,7 +11,7 @@ The fstab file contains the drives that will be mounted at boot time. It
 contains 6 columns of information that can be divided with tabs or spaces.
 
 -   Column 1: Device: You can use the UUID (Recommended) or device path
-    (UUID=\*UUID\* or \`/dev/\*device name\*\`)
+    (UUID=*UUID* or `/dev/device_name`)
 -   Column 2: Mount Point: Directory you want the drive to be mounted in. This
     can be a path to anywhere on the system.
 -   Column 3: File System: Put the partitions file system, **auto** is valid if
