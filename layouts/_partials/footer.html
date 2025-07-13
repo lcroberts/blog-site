@@ -1,7 +1,7 @@
 {{ $linked := resources.Get "logos/rss-black.svg"}}
 {{ $linked_dark := resources.Get "logos/rss-white.svg"}}
 <footer class="w-full bg-crust">
-  <div class="mx-auto p-4 flex items-center justify-between">
+  <div class="mx-auto p-4 flex items-center justify-between text-content">
     <span class="text-sm">&copy; {{ .Site.Params.copyright_from }}-<span id="copyright-year">{{ time.Now.Year }}</span>
       <a href="/" class="hover:underline">{{ .Site.Copyright }}</a>
     </span>

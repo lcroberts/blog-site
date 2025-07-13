@@ -113,9 +113,31 @@ html {
   background-position: 100% 0;
 }
 
-a {
-  @apply text-blue underline hover:text-mauve active:text-mauve;
+.text-content {
+  a {
+    @apply text-blue underline hover:text-mauve active:text-mauve;
+  }
+
+  h1 {
+    @apply text-red;
+  }
+  h2 {
+    @apply text-peach;
+  }
+  h3 {
+    @apply text-yellow;
+  }
+  h4 {
+    @apply text-green;
+  }
+  h5 {
+    @apply text-sapphire;
+  }
+  h6 {
+    @apply text-lavender;
+  }
 }
+
 
 a.active {
   background-image: linear-gradient(to right, var(--color-peach) 50%, var(--color-flamingo) 50%);

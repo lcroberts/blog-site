@@ -7,11 +7,11 @@
   <div class="flex flex-col max-w-screen-xl m-4 lg:mx-auto my-8 space-y-6">
     {{ range $paginator.Pages }}
     <div class="rounded bg-surface-0 p-4 text-subtext-0 flex flex-col gap-2">
-      <h2 class="text-2xl text-cat-text">
+      <h2 class="text-2xl text-blue underline">
         <a href="{{ .RelPermalink}}">{{ .LinkTitle }}</a>
       </h2>
-      <div>{{ .Summary }}</div>
-      <div class="flex gap-2 flex-col md:gap-4 md:flex-row">
+      <div class="text-content">{{ .Summary }}</div>
+      <div class="flex gap-2 flex-col md:gap-4 md:flex-row !text-peach">
         <div><i class="bi bi-person-square"></i> {{ delimit .Params.author ", " }}</div>
         <div><i class="bi bi-calendar2-week-fill"></i> {{ .Date.Format "January 2, 2006" }}</div>
         <div><i class="bi bi-hourglass-split"></i> {{ printf "%d Minutes" .ReadingTime }}</div>
@@ -21,7 +21,7 @@
         {{ if .Params.categories }}
         {{ range (.GetTerms "categories") }}
         <li>
-          <a href="{{ .Page.RelPermalink }}/" class="">
+          <a href="{{ .Page.RelPermalink }}/" class="bg-lavender text-crust rounded p-1">
             {{ .LinkTitle }}
           </a>
         </li>
@@ -31,7 +31,7 @@
         {{ range (.GetTerms "tags") }}
         <li>
           <a href="{{ .Page.RelPermalink }}/" class="">
-            <span class="">{{ .LinkTitle }}</span>
+            <i class="bi bi-tag"></i> <span class="">{{ .LinkTitle }}</span>
           </a>
         </li>
         {{ end }}
