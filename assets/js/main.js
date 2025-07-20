@@ -1,3 +1,5 @@
+import "./copy-button.js";
+
 document.documentElement.classList.toggle(
   "dark",
   localStorage.theme === "dark" ||
