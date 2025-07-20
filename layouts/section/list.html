@@ -16,28 +16,7 @@
         <div><i class="bi bi-calendar2-week-fill"></i> {{ .Date.Format "January 2, 2006" }}</div>
         <div><i class="bi bi-hourglass-split"></i> {{ printf "%d Minutes" .ReadingTime }}</div>
       </div>
-      {{ if (or .Params.categories .Params.tags) }}
-      <ul class="flex flex-row flex-wrap gap-4">
-        {{ if .Params.categories }}
-        {{ range (.GetTerms "categories") }}
-        <li>
-          <a href="{{ .Page.RelPermalink }}/" class="bg-peach text-crust rounded p-1">
-            {{ .LinkTitle }}
-          </a>
-        </li>
-        {{ end }}
-        {{ end }}
-        {{ if .Params.tags }}
-        {{ range (.GetTerms "tags") }}
-        <li>
-          <a href="{{ .Page.RelPermalink }}/" class="taxonomy-tag">
-            <i class="bi bi-tag"></i> <span class="">{{ .LinkTitle }}</span>
-          </a>
-        </li>
-        {{ end }}
-        {{ end }}
-      </ul>
-      {{ end }}
+      {{ partial "taxonomies.html" . }}
     </div>
     {{ end }}
   </div>
