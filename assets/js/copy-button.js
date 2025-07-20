@@ -18,30 +18,19 @@ async function copyCodeToClipboard(button, highlightDiv) {
     if (result.state == "granted" || result.state == "prompt") {
       await navigator.clipboard.writeText(codeToCopy);
     } else {
-      copyCodeBlockExecCommand(codeToCopy, highlightDiv);
+      copyCodeBlockExecCommand(codeToCopy);
     }
   } catch (_) {
-    copyCodeBlockExecCommand(codeToCopy, highlightDiv);
+    copyCodeBlockExecCommand(codeToCopy);
   } finally {
     codeWasCopied(button);
   }
 }
 
-function copyCodeBlockExecCommand(codeToCopy, highlightDiv) {
-  const textArea = document.createElement("textArea");
-  textArea.contentEditable = "true";
-  textArea.readOnly = "false";
-  textArea.className = "copyable-text-area";
-  textArea.value = codeToCopy;
-  highlightDiv.insertBefore(textArea, highlightDiv.firstChild);
-  const range = document.createRange();
-  range.selectNodeContents(textArea);
-  const sel = window.getSelection();
-  sel.removeAllRanges();
-  sel.addRange(range);
-  textArea.setSelectionRange(0, 999999);
-  document.execCommand("copy");
-  highlightDiv.removeChild(textArea);
+async function copyCodeBlockExecCommand(codeToCopy) {
+  if (navigator.clipboard) {
+    await navigator.clipboard.writeText(codeToCopy);
+  }
 }
 
 function codeWasCopied(button) {
