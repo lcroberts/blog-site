@@ -78,7 +78,7 @@ function populateResults(results) {
     searchResults.innerHTML += output;
 
     snippetHighlights.forEach(function (snipvalue, snipkey) {
-      var instance = new Mark(document.getElementById("summary-" + key));
+      const instance = new Mark(document.getElementById("summary-" + key));
       instance.mark(snipvalue);
     });
   });
