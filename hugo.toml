@@ -23,6 +23,9 @@ tag = "tags"
     tabWidth = 4
     wrapperClass = 'highlight'
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [params]
   author = ['Logan Roberts']
   copyright_from = '2022'

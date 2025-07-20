@@ -246,6 +246,7 @@ ul.pagination {
 .highlight {
   position: relative;
 }
+
 .chroma {
   @apply py-3 px-1 rounded overflow-x-auto;
 }
