@@ -1,4 +1,5 @@
 import "./copy-button.js";
+import "./search.js";
 
 document.documentElement.classList.toggle(
   "dark",
