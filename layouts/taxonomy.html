@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="text-content flex flex-col gap-4">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <ul>
+    {{ range .Data.Terms.Alphabetical }}
+    <li><h2><a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a></h2></li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
