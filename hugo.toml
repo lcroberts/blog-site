@@ -4,6 +4,10 @@ title = 'lcroberts'
 copyright = "Logan Roberts"
 summaryLength = 30
 
+[taxonomies]
+category = "categories"
+tag = "tags"
+
 [markup]
   [markup.highlight]
     anchorLineNos = false
