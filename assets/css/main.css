@@ -164,6 +164,10 @@ html {
   }
 }
 
+mark {
+  @apply bg-mauve text-crust;
+}
+
 #TableOfContents {
   ul {
     margin-left: 1rem;

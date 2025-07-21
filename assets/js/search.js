@@ -74,6 +74,9 @@ function populateResults(results) {
       tags: tags,
       categories: value.item.categories,
       snippet: snippet,
+      author: value.item.author.join(", "),
+      date: value.item.date,
+      readingtime: value.item.readingtime + " Minutes",
     });
     searchResults.innerHTML += output;
 
