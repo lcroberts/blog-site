@@ -3,6 +3,7 @@
   <div class="text-content">
     <h1>{{ .Title }}</h1>
   </div>
+  {{ partial "search_bar.html" . }}
   {{ .Content }}
   {{ range .Pages }}
   {{ partial "post_card.html" . }}
