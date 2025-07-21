@@ -1,9 +1,9 @@
 {{ define "main" }}
-<div class="max-w-screen-xl m-4 lg:mx-auto my-8">
-  <form action="/search" method="GET" class="mb-6 flex gap-4">
-    <button type="submit" class="rounded p-1 px-2 bg-blue text-crust">Search</button>
-    <input type="search" name="q" id="search-query" placeholder="Search...." class="flex-grow rounded bg-surface-2/50 p-1">
-  </form>
+<div class="max-w-screen-xl m-4 lg:mx-auto my-8 flex flex-col space-y-6">
+  <div class="text-content">
+    <h1>Search</h1>
+  </div>
+  {{ partial "search_bar.html" . }}
   <div id="search-results" class="flex flex-col space-y-6">
   </div>
   <div class="search-loading">Loading...</div>
