@@ -187,6 +187,10 @@ mark {
   color: var(--color-red) !important;
 }
 
+.taxonomy-category {
+  @apply bg-peach text-crust rounded p-1;
+}
+
 a.active {
   background-image: linear-gradient(to right, var(--color-peach) 50%, var(--color-flamingo) 50%);
 }

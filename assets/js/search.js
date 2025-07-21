@@ -62,8 +62,13 @@ function populateResults(results) {
     let tags = "";
     if (value.item.tags) {
       value.item.tags.forEach(function (element) {
-        tags =
-          tags + "<a href='/tags/" + element + "'>" + "#" + element + "</a> ";
+        tags += "<li><a href='/tags/" + element.toLowerCase().replaceAll(' ', '-') + "' class='taxonomy-tag'><i class='bi bi-tag'></i> " + element + "</a></li>";
+      });
+    }
+    let categories = "";
+    if (value.item.categories) {
+      value.item.categories.forEach(function (element) {
+        categories += "<li><a href='/categories/" + element.toLowerCase().replaceAll(' ', '-') + "' class='taxonomy-category'>" + element + "</a></li>";
       });
     }
 
@@ -72,7 +77,7 @@ function populateResults(results) {
       title: value.item.title,
       link: value.item.permalink,
       tags: tags,
-      categories: value.item.categories,
+      categories: categories,
       snippet: snippet,
       author: value.item.author.join(", "),
       date: value.item.date,

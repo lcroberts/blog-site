@@ -3,7 +3,7 @@
   {{ if .Params.categories }}
   {{ range (.GetTerms "categories") }}
   <li>
-    <a href="{{ .Page.RelPermalink }}/" class="bg-peach text-crust rounded p-1">
+    <a href="{{ .Page.RelPermalink }}/" class="taxonomy-category">
       {{ .LinkTitle }}
     </a>
   </li>

@@ -1,13 +1,15 @@
 {{ define "main" }}
-<main>
-  <form action="/search" method="GET">
-    <input type="search" name="q" id="search-query" placeholder="Search....">
-    <button type="submit">Search</button>
+<div class="max-w-screen-xl m-4 lg:mx-auto my-8">
+  <form action="/search" method="GET" class="mb-6 flex gap-4">
+    <button type="submit" class="rounded p-1 px-2 bg-blue text-crust">Search</button>
+    <input type="search" name="q" id="search-query" placeholder="Search...." class="flex-grow rounded bg-surface-2/50 p-1">
   </form>
-  <div id="search-results"></div>
+  <div id="search-results" class="flex flex-col space-y-6">
+  </div>
   <div class="search-loading">Loading...</div>
+</div>
 
-  <script id="search-result-template" type="text/x-js-template">
+<script id="search-result-template" type="text/x-js-template">
     <div id="summary-${key}" class="rounded bg-surface-0 p-4 text-subtext-0 flex flex-col gap-4">
         <h2 class="text-2xl text-blue hover:text-mauve underline"><a href="${link}">${title}</a></h2>
         <div class="text-content">${snippet}</div>
@@ -16,11 +18,10 @@
           <div><i class="bi bi-calendar2-week-fill"></i> ${date}</div>
           <div><i class="bi bi-hourglass-split"></i> ${readingtime}</div>
         </div>
-        <div>
-          ${ isset categories }Categories: ${categories}<br>${ end }
-          ${ isset tags }Tags: ${tags}<br>${ end }
-        </div>
+        <ul class="flex flex-row flex-wrap gap-4">
+          ${ isset categories }${categories}${ end }
+          ${ isset tags }${tags}${ end }
+        </ul>
     </div>
-    </script>
-</main>
+</script>
 {{ end }}
