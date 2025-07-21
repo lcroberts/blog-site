@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="max-w-screen-xl mx-auto my-4 px-4 text-content">
-  <h1 class="mb-4 text-center">About Me</h1>
-  <div class="flex flex-col lg:flex-row gap-4 lg:gap-8">
+  <h1 class="mb-4 text-center lg:text-left">About Me</h1>
+  <div class="flex flex-col lg:flex-row-reverse gap-4 lg:gap-8">
     {{ $headshot := resources.Get "images/headshot.jpg" }}
     <div>
       <img class="max-h-full max-w-full m-auto" src="{{ $headshot.RelPermalink }}">
