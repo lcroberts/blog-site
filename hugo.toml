@@ -39,6 +39,10 @@ tag = "tags"
     name = "Blog"
     pageRef = "/blog"
     weight = 2
+  [[menu.main]]
+    name = "Search"
+    pageRef = "/search"
+    weight = 3
 
 [build]
   [build.buildStats]

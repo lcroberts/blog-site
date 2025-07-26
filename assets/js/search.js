@@ -62,13 +62,23 @@ function populateResults(results) {
     let tags = "";
     if (value.item.tags) {
       value.item.tags.forEach(function (element) {
-        tags += "<li><a href='/tags/" + element.toLowerCase().replaceAll(' ', '-') + "' class='taxonomy-tag'><i class='bi bi-tag'></i> " + element + "</a></li>";
+        tags +=
+          "<li><a href='/tags/" +
+          element.toLowerCase().replaceAll(" ", "-") +
+          "' class='taxonomy-tag'><i class='bi bi-tag'></i> " +
+          element +
+          "</a></li>";
       });
     }
     let categories = "";
     if (value.item.categories) {
       value.item.categories.forEach(function (element) {
-        categories += "<li><a href='/categories/" + element.toLowerCase().replaceAll(' ', '-') + "' class='taxonomy-category'>" + element + "</a></li>";
+        categories +=
+          "<li><a href='/categories/" +
+          element.toLowerCase().replaceAll(" ", "-") +
+          "' class='taxonomy-category'>" +
+          element +
+          "</a></li>";
       });
     }
 
@@ -121,8 +131,11 @@ document.addEventListener("DOMContentLoaded", function () {
       inputBox.value = searchQuery || "";
       executeSearch(searchQuery, false);
     } else {
-      document.getElementById("search-results").innerHTML =
-        '<p class="search-results-empty flex justify-center text-2xl">Please enter a word or phrase above.</p>';
+      const searchResults = document.getElementById("search-results");
+      if (searchResults) {
+        searchResults.innerHTML =
+          '<p class="search-results-empty flex justify-center text-2xl">Please enter a word or phrase above.</p>';
+      }
     }
   }
 
