@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const searchResults = document.getElementById("search-results");
       if (searchResults) {
         searchResults.innerHTML =
-          '<p class="search-results-empty flex justify-center text-2xl">Please enter a word or phrase above.</p>';
+          '<p class="search-results-empty text-center text-content text-2xl">Please enter a word or phrase above or look at <a href="/tags">available tags</a>.</p>';
       }
     }
   }
