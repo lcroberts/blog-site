@@ -3,47 +3,45 @@
   <h1 class="mb-4 text-center lg:text-left">About Me</h1>
   <div class="flex flex-col lg:flex-row-reverse gap-4 lg:gap-8">
     {{ $headshot := resources.Get "images/headshot.jpg" }}
-    <div>
+    <div class="basis-1/4">
       <img class="max-h-full max-w-full m-auto" src="{{ $headshot.RelPermalink }}">
     </div>
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-4 basis-3/4 text-lg">
       <p>
-        My name is Logan Roberts. I am a computer science student at the University of
-        North Carolina at Greensboro (UNCG). I enjoy tinkering with computer hardware
-        and love to build computers, whether it's for myself or helping my friends who
-        aren't as computer savvy. I tinker quite a bit with computer software as well.
-        For that reason I love Linux and the ability to configure it to be exactly how
-        I like it. I find that programming and just general computer usage is more fun
-        when you really know your environment, but I also just find the process of
-        setting things up to be relaxing. My configuration for programs I use can be
-        found in my <a href="https://github.com/lcroberts/dotfiles">dotfiles repo</a>.
+        I'm Logan Roberts, a web developer at <a href="https://www.xternsoftware.com/">Xtern Software</a> and a 2025
+        computer science graduate from UNC Greensboro. I specialize in PHP and
+        JavaScript, building full-stack web applications with tools like
+        Laravel, PostgreSQL, and React. My work includes projects like the drag-and-drop
+        block editor in <a href="https://harmonyb2b.io/">Harmony B2B</a>, where
+        I developed both the frontend interface and backend functionality. I
+        enjoy working across the stack and exploring different languages and
+        paradigms to create smooth, engaging user experiences.
       </p>
       <p>
-        One of my favorite configurable programs is Neovim. It's by far my favorite
-        text editor. I love how easy it is to make binds to do anything you could want,
-        from just sending in keyboard inputs to running Lua functions, they are so
-        versatile and allow you to tailor your experience so easily. I also love how
-        responsive it is and how easy it is to access editor features to extend the
-        editor.
+        Other than my professional experience, I also spend a lot of time
+        experimenting with things on my own. I have a VPS where I self-host a
+        range of differnt services including game servers, and audiobook
+        server, and more. I also maintain a <a
+          href="https://github.com/lcroberts/container-builds?tab=readme-ov-file#wmbazzite">custom
+          immutable Linux image</a> that I used to gain experience with github
+        workflows and containerization technologies. Through hands-on
+        experience I have gained extensive knowledge of Linux and the ability
+        to write flexible scripts using bash or python.
       </p>
       <p>
-        Another of my many interests and hobbies is keyboards. I love the feel and
-        sound of a nice keyboard but more than that I love the customizability of
-        keyboards that use open source firmware such as QMK and ZMK. I really only
-        began to appreciate keyboard customizability once I began feeling wrist pain
-        after longer periods of time programming. By making use of home row modifier
-        keys I was able to mitigate the pain but the only thing that truly prevented it
-        was a split keyboard. I encourage anyone who feels any amount of discomfort in
-        their wrists while programming to take action now and to begin to think about
-        what might be causing the discomfort.
-      </p>
-      <p>
-        As far as programming languages go, I write my hobby programs and one off tools
-        in Go. I love it's simplicity and appreciate how little I feel I have to fight
-        the language. I also have experience coding in Java, C, and Python through
-        school. In an internship I have used PHP with Laravel and Javascript with
-        React. I have also spent a bit of time with Lua through writing Garry's Mod
-        addons and writing Neovim configurations/addons.
+
+        I'm a self-admitted text editing nerd who’s spent a lot of time making
+        coding as enjoyable as possible. I use and love <a
+          href="https://github.com/neovim/neovim">Neovim</a>, and have written
+        two plugins: the more complex <a
+          href="https://lazylangs.com/">LazyLangs.nvim</a> and the simpler <a
+          href="https://github.com/lcroberts/persistent-colorscheme.nvim">persistent-colorscheme.nvim</a>,
+        my intro to plugin development. My <a
+          href="https://github.com/lcroberts/config.nvim">highly customized
+          Neovim config</a> powers most of my hobby development. I'm also a fan
+        of <a href="/blog/home-row-mods/">home row modifiers</a> and modal
+        editing to help prevent wrist pain from long coding sessions.
+
       </p>
     </div>
   </div>
