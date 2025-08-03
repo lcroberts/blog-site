@@ -22,6 +22,8 @@ tag = "tags"
     noClasses = false
     tabWidth = 4
     wrapperClass = 'highlight'
+  [markup.goldmark.renderer]
+    unsafe = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
