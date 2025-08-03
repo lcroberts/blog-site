@@ -13,7 +13,7 @@ function handleNavbar() {
   const mobileMenu = document.querySelector(".navigation-menu");
 
   mobileMenuButton.addEventListener("click", () => {
-    mobileMenu.classList.toggle("max-h-30");
+    mobileMenu.classList.toggle("!max-h-36");
   });
 }
 
