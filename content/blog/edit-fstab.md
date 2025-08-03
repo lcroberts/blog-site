@@ -1,6 +1,6 @@
 +++
 title = "An (Actually) Easy Guide to Editing the Fstab file"
-author = ["Logan Roberts"]
+author = "Logan Roberts"
 date = 2023-08-07T00:00:00-04:00
 categories = ["Tutorial"]
 tags = ["Linux", "Configuration"]

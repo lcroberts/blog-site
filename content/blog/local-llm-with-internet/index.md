@@ -1,6 +1,6 @@
 +++
 title = 'Running Local LLMs With Internet Access Using Docker Compose'
-author = ["Logan Roberts"]
+author = "Logan Roberts"
 date = 2024-11-03T00:00:00-05:00
 categories = ["Tutorial"]
 tags = ["LLM", "Docker"]

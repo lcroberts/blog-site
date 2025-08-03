@@ -3,7 +3,7 @@
 <footer class="w-full bg-crust">
   <div class="mx-auto p-4 flex items-center justify-between text-content">
     <span class="text-sm">&copy; {{ .Site.Params.copyright_from }}-<span id="copyright-year">{{ time.Now.Year }}</span>
-      <a href="/" class="hover:underline">{{ .Site.Copyright }}</a>
+      <a href="mailto:{{ .Site.Params.author.email }}" class="hover:underline">{{ .Site.Copyright }}</a>
     </span>
     <a href="/index.xml" target="_blank" class="duration-150 transition-[scale] origin-center hover:scale-125">
       <img src="{{ $linked.RelPermalink }}" alt="LinkedIn Logo" class="dark:hidden w-5 h-5 opacity-65" />

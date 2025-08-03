@@ -89,7 +89,7 @@ function populateResults(results) {
       tags: tags,
       categories: categories,
       snippet: snippet,
-      author: value.item.author.join(", "),
+      author: value.item.author,
       date: value.item.date,
       readingtime: value.item.readingtime + " Minutes",
     });

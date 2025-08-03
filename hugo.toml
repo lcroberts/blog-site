@@ -27,8 +27,10 @@ tag = "tags"
   home = ["HTML", "RSS", "JSON"]
 
 [params]
-  author = ['Logan Roberts']
   copyright_from = '2022'
+  [params.author]
+    name = "Logan Roberts"
+    email = "logan@lcroberts.dev"
 
 [menus]
   [[menu.main]]
@@ -40,9 +42,13 @@ tag = "tags"
     pageRef = "/blog"
     weight = 2
   [[menu.main]]
+    name = "Projects"
+    pageRef = "/projects"
+    weight = 3
+  [[menu.main]]
     name = "Search"
     pageRef = "/search"
-    weight = 3
+    weight = 4
 
 [build]
   [build.buildStats]

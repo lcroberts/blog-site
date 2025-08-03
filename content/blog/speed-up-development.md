@@ -1,6 +1,6 @@
 +++
 title = "Speeding Up Your Software Development Workflow"
-author = ["Logan Roberts"]
+author = "Logan Roberts"
 date = 2024-01-26T00:00:00-05:00
 categories = ["Tips and Tricks"]
 tags = ["Opinion", "Coding"]

@@ -4,7 +4,7 @@
   </h2>
   <div class="text-content">{{ .Summary }}</div>
   <div class="flex gap-2 flex-col md:gap-4 md:flex-row !text-peach">
-    <div><i class="bi bi-person-square"></i> {{ delimit .Params.author ", " }}</div>
+    <div><i class="bi bi-person-square"></i> {{ .Params.author }}</div>
     <div><i class="bi bi-calendar2-week-fill"></i> {{ .Date.Format "January 2, 2006" }}</div>
     <div><i class="bi bi-hourglass-split"></i> {{ printf "%d Minutes" .ReadingTime }}</div>
   </div>
