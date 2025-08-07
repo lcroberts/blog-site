@@ -2,7 +2,7 @@
   <h2 class="text-2xl text-blue hover:text-mauve underline">
     <a href="{{ .RelPermalink}}">{{ .LinkTitle }}</a>
   </h2>
-  <div class="text-content">{{ .Summary }}</div>
+  <div class="text-content">{{ .Summary | plainify }}</div>
   <div class="flex gap-2 flex-col md:gap-4 md:flex-row !text-peach">
     <div><i class="bi bi-person-square"></i> {{ .Params.author }}</div>
     <div><i class="bi bi-calendar2-week-fill"></i> {{ .Date.Format "January 2, 2006" }}</div>
