@@ -112,6 +112,7 @@ html {
   background-color: var(--color-cat-text);
   background-image: linear-gradient(to right, var(--color-peach) 50%, var(--color-cat-text) 50%);
   background-position: 100% 0;
+  width: fit-content;
 }
 
 .text-content {
