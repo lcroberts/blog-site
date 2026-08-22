@@ -1,5 +1,5 @@
 +++
-title = 'Persistent Colorcheme'
+title = 'Persistent Colorscheme'
 date = 2024-01-02T00:00:00Z
 author = "Logan Roberts"
 categories = ["plugin"]
@@ -8,7 +8,7 @@ toc = false
 draft = false
 +++
 
-[persistent-colorshceme.nvim](https://github.com/lcroberts/persistent-colorscheme.nvim)
+[persistent-colorscheme.nvim](https://github.com/lcroberts/persistent-colorscheme.nvim)
 is a simple neovim plugin that persists the colorscheme you choose (via the
 colorscheme command) across launches of neovim. I created this plugin out of a
 simple desire to be able to easily swap colorscheme's at will without having to
